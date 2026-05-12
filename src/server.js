@@ -379,17 +379,47 @@ async function googleTranslate(text, target, source) {
       to: target,
       ...(source ? { from: source } : {}),
     });
-    const translated = translatedResult?.text || text;
+    const translated = translatedResult?.text || "";
+    if (translated && translated !== text) {
+      return translated;
+    }
+  } catch (_error) {
+    // Ignore and try fallback below.
+  }
+
+  try {
+    const fallbackResponse = await axios.get(
+      "https://translate.googleapis.com/translate_a/single",
+      {
+        params: {
+          client: "gtx",
+          sl: source || "auto",
+          tl: target,
+          dt: "t",
+          q: text,
+        },
+        timeout: 15000,
+      }
+    );
+
+    const translated = Array.isArray(fallbackResponse.data?.[0])
+      ? fallbackResponse.data[0].map((chunk) => chunk[0]).join("")
+      : "";
+
+    if (translated && translated !== text) {
+      return translated;
+    }
+
     if (target === "hi" && translated === text) {
       return getHindiFallbackTranslation(text);
     }
-    return translated;
   } catch (_error) {
     if (target === "hi") {
       return getHindiFallbackTranslation(text);
     }
-    return text;
   }
+
+  return text;
 }
 
 async function detectLanguageFromGoogle(text) {
@@ -399,7 +429,30 @@ async function detectLanguageFromGoogle(text) {
 
   try {
     const detectedResult = await translate(text, { to: "en" });
-    return detectedResult?.from?.language?.iso || "";
+    const detected = detectedResult?.from?.language?.iso || "";
+    if (detected) {
+      return detected;
+    }
+  } catch (_error) {
+    // Ignore and try fallback below.
+  }
+
+  try {
+    const fallbackResponse = await axios.get(
+      "https://translate.googleapis.com/translate_a/single",
+      {
+        params: {
+          client: "gtx",
+          sl: "auto",
+          tl: "en",
+          dt: "t",
+          q: text,
+        },
+        timeout: 15000,
+      }
+    );
+    const detected = fallbackResponse.data?.[2];
+    return typeof detected === "string" ? detected : "";
   } catch (_error) {
     return "";
   }
@@ -424,6 +477,34 @@ async function resolvePreferredLanguage(inputText) {
   if (!normalizedInput) {
     return null;
   }
+  const normalizedWords = normalizedInput.split(/\s+/).filter(Boolean);
+
+  const forcedLanguagePatterns = [
+    { pattern: /^(bengali|bangali|bangla|bengli)$/i, code: "bn" },
+    { pattern: /^(hindi|hindi language|hind|hinid)$/i, code: "hi" },
+    { pattern: /^(english|eng)$/i, code: "en" },
+  ];
+  const trimmedRaw = (inputText || "").trim().toLowerCase();
+  const forcedMatch = forcedLanguagePatterns.find((item) =>
+    item.pattern.test(trimmedRaw)
+  );
+  if (forcedMatch) {
+    const forcedLanguage = getLanguageByCode(forcedMatch.code);
+    if (forcedLanguage) {
+      return forcedLanguage;
+    }
+  }
+
+  if (
+    trimmedRaw.includes("বাংলা") ||
+    trimmedRaw.includes("বাঙালি") ||
+    trimmedRaw.includes("বেঙ্গলি")
+  ) {
+    const language = getLanguageByCode("bn");
+    if (language) {
+      return language;
+    }
+  }
 
   const languageAliases = {
     english: "en",
@@ -431,6 +512,8 @@ async function resolvePreferredLanguage(inputText) {
     hindi: "hi",
     bengali: "bn",
     bangla: "bn",
+    bangali: "bn",
+    bengli: "bn",
     telugu: "te",
     marathi: "mr",
     tamil: "ta",
@@ -445,7 +528,7 @@ async function resolvePreferredLanguage(inputText) {
   };
 
   const aliasCode = Object.keys(languageAliases).find((alias) =>
-    normalizedInput.includes(alias)
+    normalizedWords.includes(alias)
   );
   if (aliasCode) {
     const language = getLanguageByCode(languageAliases[aliasCode]);
@@ -1374,6 +1457,25 @@ app.post("/call/end/send-link", async (req, res) => {
     return res.status(400).json({
       ok: false,
       error: "Provide 'phone' as a valid string.",
+    });
+  }
+
+  const result = await sendWebchatLinkToPhone(phone);
+  return res.status(200).json({
+    ok: true,
+    triggered: true,
+    reason: "call_ended",
+    redirectUrl: WEBCHAT_FORM_LINK,
+    ...result,
+  });
+});
+
+app.get("/call/end/send-link", async (req, res) => {
+  const { phone } = req.query || {};
+  if (!phone || typeof phone !== "string") {
+    return res.status(400).json({
+      ok: false,
+      error: "Provide 'phone' in query string. Example: /call/end/send-link?phone=91XXXXXXXXXX",
     });
   }
 

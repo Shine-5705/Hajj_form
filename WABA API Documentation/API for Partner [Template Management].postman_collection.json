@@ -1,0 +1,1559 @@
+{
+	"info": {
+		"_postman_id": "28b800dd-927e-4652-903c-e09073cf26fb",
+		"name": "API for Partner [Template fetch and Get]",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26126561",
+		"_collection_link": "https://operation-team-3762.postman.co/workspace/Async-and-Temlate~4f4eb1dd-d437-4630-a838-ebde80d3eb68/collection/26126561-28b800dd-927e-4652-903c-e09073cf26fb?action=share&source=collection_link&creator=26126561"
+	},
+	"item": [
+		{
+			"name": "Get Template List Without pagination",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{APIKEY}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"page_number\": \"\",\n    \"page_size\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/wa/v1/templates/get-list",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"wa",
+						"v1",
+						"templates",
+						"get-list"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{APIKEY}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"page_number\": \"\",\n    \"page_size\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/wa/v1/templates/get-list",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"wa",
+								"v1",
+								"templates",
+								"get-list"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "Content-Length",
+							"value": "45336"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"b118-LRiEqY8zNta6I5tcCZWGXlo65kU\""
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "connect.sid=s%3AfTx6XEfiILafDNo7Vth0gVZWlYTG0imY.Do0JCuyAR6j8npmnRMyM%2BPAYWr%2FgAV7hn80f4xMoCms; Path=/; HttpOnly"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 30 May 2024 11:39:34 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"Template Fetched Successfully\",\n    \"code\": 200,\n    \"res_json\": {\n        \"data\": [\n            {\n                \"whatsapp_template_id\": 43143,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"sample_teatingvarible\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"type\": \"HEADER\",\n                        \"format\": \"IMAGE\",\n                        \"example\": {\n                            \"header_handle\": [\n                                \"IMAGE_URL\"\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"BODY TEXT\",\n                        \"type\": \"BODY\",\n                        \"example\": {\n                            \"body_text\": [\n                                [\n                                    \"VARIABLE VALUE IF ANY IN BODY\"\n                                ]\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"To Opt Out, Click Stop\",\n                        \"type\": \"FOOTER\"\n                    },\n                    {\n                        \"type\": \"BUTTONS\",\n                        \"buttons\": [\n                            {\n                                \"url\": \"https://URL/{{1}}\",\n                                \"text\": \"Visit Website\",\n                                \"type\": \"URL\",\n                                \"example\": [\n                                    \"fdffddtggtdfrtgtg\"\n                                ]\n                            },\n                            {\n                                \"text\": \"Call Now\",\n                                \"type\": \"PHONE_NUMBER\",\n                                \"phone_number\": \"+91XXXXXXXXXX\"\n                            },\n                            {\n                                \"text\": \"Stop\",\n                                \"type\": \"QUICK_REPLY\"\n                            }\n                        ]\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 1,\n                \"file_type\": \"IMAGE\",\n                \"file_url\": \"<Media FILE URL>\",\n                \"is_url_trackable\": 0,\n                \"external_id\": \"982390659616790\",\n                \"wa_meta_template_id\": \"IAsXD82awbbkWFetO6nqWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43145,\n                \"language\": \"en_US\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"seasonal_promotion1\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"text\": \"Our {{1}} is on!\",\n                        \"type\": \"HEADER\",\n                        \"format\": \"TEXT\",\n                        \"example\": {\n                            \"header_text\": [\n                                \"Summer Sale\"\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"Shop now through {{1}} and use code {{2}} to get {{3}} off of all merchandise.\",\n                        \"type\": \"BODY\",\n                        \"example\": {\n                            \"body_text\": [\n                                [\n                                    \"the end of August\",\n                                    \"25OFF\",\n                                    \"25%\"\n                                ]\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"Use the buttons below to manage your marketing subscriptions\",\n                        \"type\": \"FOOTER\"\n                    },\n                    {\n                        \"type\": \"BUTTONS\",\n                        \"buttons\": [\n                            {\n                                \"text\": \"Unsubscribe from Promos\",\n                                \"type\": \"QUICK_REPLY\"\n                            },\n                            {\n                                \"text\": \"Unsubscribe from All\",\n                                \"type\": \"QUICK_REPLY\"\n                            }\n                        ]\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": null,\n                \"file_url\": null,\n                \"is_url_trackable\": 0,\n                \"external_id\": \"773766354874592\",\n                \"wa_meta_template_id\": \"eX0IS2VHHkgPE4nRgNHGWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43146,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"hf_template\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"text\": \"hi\",\n                        \"type\": \"HEADER\",\n                        \"format\": \"TEXT\"\n                    },\n                    {\n                        \"text\": \"This is header footer template testing\",\n                        \"type\": \"BODY\"\n                    },\n                    {\n                        \"text\": \"thank you\",\n                        \"type\": \"FOOTER\"\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 1,\n                \"file_type\": \"\",\n                \"file_url\": \"\",\n                \"is_url_trackable\": 0,\n                \"external_id\": \"950102786844676\",\n                \"wa_meta_template_id\": \"RxXR52NuAIF9YtJRhqihWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43149,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"header_type_text_with_var_template\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"text\": \"Namestey,\",\n                        \"type\": \"HEADER\",\n                        \"format\": \"TEXT\"\n                    },\n                    {\n                        \"text\": \"{{1}}, This is text with  Header type (text) and with multiple body variables\\ntemplate for testing purpose\\n {{2}}\",\n                        \"type\": \"BODY\",\n                        \"example\": {\n                            \"body_text\": [\n                                [\n                                    \"Samant\",\n                                    \"Anil\"\n                                ]\n                            ]\n                        }\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": null,\n                \"file_url\": null,\n                \"is_url_trackable\": 0,\n                \"external_id\": \"765654465666974\",\n                \"wa_meta_template_id\": \"eIQbtyeCr9fjClcces9qWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43150,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"multiple_body_variable_with_quick_reply_btn\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"text\": \"{{1}} \\n\\nThis is for text with multiple body variable and quick reply button template testing purpose\\n\\n {{2}}  {{3}}\",\n                        \"type\": \"BODY\",\n                        \"example\": {\n                            \"body_text\": [\n                                [\n                                    \"Mandeep\",\n                                    \"Anil\",\n                                    \"Kumar\"\n                                ]\n                            ]\n                        }\n                    },\n                    {\n                        \"type\": \"BUTTONS\",\n                        \"buttons\": [\n                            {\n                                \"text\": \"Say Hi\",\n                                \"type\": \"QUICK_REPLY\"\n                            }\n                        ]\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": null,\n                \"file_url\": null,\n                \"is_url_trackable\": 0,\n                \"external_id\": \"444447028072984\",\n                \"wa_meta_template_id\": \"f3OkNuA5f8a42oNlEN7wWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43151,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"variable_in_header_and_body\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"text\": \"Hi {{1}},\",\n                        \"type\": \"HEADER\",\n                        \"format\": \"TEXT\",\n                        \"example\": {\n                            \"header_text\": [\n                                \"Ashish\"\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"{{1}}, This is for text with Header Type (text with a variable in header text)  and with multiple body variables template for testing purpose. \\n\\n {{2}}\",\n                        \"type\": \"BODY\",\n                        \"example\": {\n                            \"body_text\": [\n                                [\n                                    \"Ashish\",\n                                    \"Anil\"\n                                ]\n                            ]\n                        }\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": null,\n                \"file_url\": null,\n                \"is_url_trackable\": 0,\n                \"external_id\": \"996833468656210\",\n                \"wa_meta_template_id\": \"kYTFsjsoY8ZPWdMzLzHVWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43152,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"simple_header_type_text_template\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"text\": \"Hi Mandeep\",\n                        \"type\": \"HEADER\",\n                        \"format\": \"TEXT\"\n                    },\n                    {\n                        \"text\": \"this is for simple header type text template testing purpose\",\n                        \"type\": \"BODY\"\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": null,\n                \"file_url\": null,\n                \"is_url_trackable\": 0,\n                \"external_id\": \"244728525366434\",\n                \"wa_meta_template_id\": \"QiV5psiPp11jlDLFTcw2WT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43153,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"multiple_body_variable_with_call_action_btn\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"text\": \"{{1}} \\n\\nthis is for multiple body variable with call action btn template testing purpose\\n\\n {{2}}  {{3}}\",\n                        \"type\": \"BODY\",\n                        \"example\": {\n                            \"body_text\": [\n                                [\n                                    \"Ashish\",\n                                    \"Shubham\",\n                                    \"Sharma\"\n                                ]\n                            ]\n                        }\n                    },\n                    {\n                        \"type\": \"BUTTONS\",\n                        \"buttons\": [\n                            {\n                                \"text\": \"Call us\",\n                                \"type\": \"PHONE_NUMBER\",\n                                \"phone_number\": \"+919999999999\"\n                            }\n                        ]\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": null,\n                \"file_url\": null,\n                \"is_url_trackable\": 0,\n                \"external_id\": \"894418642440517\",\n                \"wa_meta_template_id\": \"UHglFkLnYTfMgfiAq3LJWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43155,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"text_template_with_quick_reply_buttons\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"text\": \"This is for text with quick reply buttons testing purpose\",\n                        \"type\": \"BODY\"\n                    },\n                    {\n                        \"type\": \"BUTTONS\",\n                        \"buttons\": [\n                            {\n                                \"text\": \"Quick Reply\",\n                                \"type\": \"QUICK_REPLY\"\n                            }\n                        ]\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": null,\n                \"file_url\": null,\n                \"is_url_trackable\": 0,\n                \"external_id\": \"1643796256363056\",\n                \"wa_meta_template_id\": \"xayfOyrSbCap8g8JbpGEWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43156,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"text_template_without_variable\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"text\": \"This is for text template without variable testing purpose\",\n                        \"type\": \"BODY\"\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": null,\n                \"file_url\": null,\n                \"is_url_trackable\": 0,\n                \"external_id\": \"829568615870034\",\n                \"wa_meta_template_id\": \"Y1WoEe4c4zhBiobpUp5lWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43157,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"text_template_with_call_to_action_button\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"text\": \"This is for Text with call to Action button template  testing purpose\",\n                        \"type\": \"BODY\"\n                    },\n                    {\n                        \"type\": \"BUTTONS\",\n                        \"buttons\": [\n                            {\n                                \"text\": \"call us\",\n                                \"type\": \"PHONE_NUMBER\",\n                                \"phone_number\": \"+917424950955\"\n                            }\n                        ]\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": null,\n                \"file_url\": null,\n                \"is_url_trackable\": 0,\n                \"external_id\": \"790801799681960\",\n                \"wa_meta_template_id\": \"y6QVVXQvFbFlnPMu39y6WT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43158,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"text_with_multiple_body_variable\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"text\": \"Hi\\n \\ntext message with multiple body variable template testing purpose {{1}} \\n\\n {{2}}\",\n                        \"type\": \"BODY\",\n                        \"example\": {\n                            \"body_text\": [\n                                [\n                                    \"Anil\",\n                                    \"Samant\"\n                                ]\n                            ]\n                        }\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": null,\n                \"file_url\": null,\n                \"is_url_trackable\": 0,\n                \"external_id\": \"7590677134358100\",\n                \"wa_meta_template_id\": \"ZdbsOSrjc6R7hld3ZTpnWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43159,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"header_type_text_with_var_in_header\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"text\": \"Hi {{1}}\",\n                        \"type\": \"HEADER\",\n                        \"format\": \"TEXT\",\n                        \"example\": {\n                            \"header_text\": [\n                                \"Anil\"\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"This is for text with Header Type (text with variable in header text)  and without any body variables template for testing purpose\",\n                        \"type\": \"BODY\"\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": null,\n                \"file_url\": null,\n                \"is_url_trackable\": 0,\n                \"external_id\": \"1633355944082956\",\n                \"wa_meta_template_id\": \"ZHxMrxinmdhCa0rEJL9BWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43161,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"text_without_video_caption\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"type\": \"HEADER\",\n                        \"format\": \"VIDEO\",\n                        \"example\": {\n                            \"header_handle\": [\n                                \"https://scontent.whatsapp.net/v/t61.29466-34/430163368_1019343916416896_527453034688192173_n.mp4?ccb=1-7&_nc_sid=8b1bef&_nc_ohc=t_NoH5jIqGkQ7kNvgGLIY2d&_nc_ht=scontent.whatsapp.net&edm=AH51TzQEAAAA&oh=01_Q5AaIDSiuk48bv8WfWO-I8QselWtZ6Qp1Zrf7EnJ316ui4C4&oe=667EA86A\"\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"This is for video without caption template testing purpose\",\n                        \"type\": \"BODY\"\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 1,\n                \"file_type\": \"VIDEO\",\n                \"file_url\": \"<VIDEO URL>\",\n                \"is_url_trackable\": 0,\n                \"external_id\": \"1019343913083563\",\n                \"wa_meta_template_id\": \"XPDhzpGD8VJRL8IkWNJPWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43162,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"text_with_document\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"type\": \"HEADER\",\n                        \"format\": \"DOCUMENT\",\n                        \"example\": {\n                            \"header_handle\": [\n                                \"https://scontent.whatsapp.net/v/t61.29466-34/384755298_7507861402645574_8783364790118939040_n.pdf?ccb=1-7&_nc_sid=8b1bef&_nc_ohc=kFiDaINMXZ8Q7kNvgGr9SWa&_nc_ht=scontent.whatsapp.net&edm=AH51TzQEAAAA&oh=01_Q5AaIAHhBQ6JWPWB2fP_b-05cdN1WC9QhpqVnv7Ij1pA66d-&oe=667ED803\"\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"Document template testing purpose\",\n                        \"type\": \"BODY\"\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 1,\n                \"file_type\": \"DOCUMENT\",\n                \"file_url\": \"DOCUMENT URL\",\n                \"is_url_trackable\": 0,\n                \"external_id\": \"7507861372645577\",\n                \"wa_meta_template_id\": \"bHIO6OmGvm6zcvj94JOWWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43163,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"text_without_image_caption\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"type\": \"HEADER\",\n                        \"format\": \"IMAGE\",\n                        \"example\": {\n                            \"header_handle\": [\n                                \"https://scontent.whatsapp.net/v/t61.29466-34/417438055_742139494799164_6465976706628238879_n.png?ccb=1-7&_nc_sid=8b1bef&_nc_ohc=8vLLgTFXYAUQ7kNvgHuBYwZ&_nc_ht=scontent.whatsapp.net&edm=AH51TzQEAAAA&oh=01_Q5AaIB9s81B2wUADJPHn4zA6IatT7iCcNtnjK_-qTkZIRftX&oe=667EB7B7\"\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"This is for text without an image caption template for testing purpose\",\n                        \"type\": \"BODY\"\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": null,\n                \"file_url\": null,\n                \"is_url_trackable\": 0,\n                \"external_id\": \"742139491465831\",\n                \"wa_meta_template_id\": \"HCNqUutsitRiDxvUQnRtWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43164,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"template_with_header_footer_body\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"text\": \"Hi,\",\n                        \"type\": \"HEADER\",\n                        \"format\": \"TEXT\"\n                    },\n                    {\n                        \"text\": \"This is for simple header footer and body text template for testing purpose\",\n                        \"type\": \"BODY\"\n                    },\n                    {\n                        \"text\": \"footer text\",\n                        \"type\": \"FOOTER\"\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": null,\n                \"file_url\": null,\n                \"is_url_trackable\": 0,\n                \"external_id\": \"2676770415830548\",\n                \"wa_meta_template_id\": \"2MKXcH4NefB0F3kDow3DWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43167,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"template_with_variable_hfb\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"text\": \"Hi,\",\n                        \"type\": \"HEADER\",\n                        \"format\": \"TEXT\"\n                    },\n                    {\n                        \"text\": \"{{1}}, This is for text with header text and footer text and with body variable template testing purpose \\n\\n {{2}}\",\n                        \"type\": \"BODY\",\n                        \"example\": {\n                            \"body_text\": [\n                                [\n                                    \"Mandeep\",\n                                    \"Rahul\"\n                                ]\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"footer text\",\n                        \"type\": \"FOOTER\"\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": null,\n                \"file_url\": null,\n                \"is_url_trackable\": 0,\n                \"external_id\": \"453466777058281\",\n                \"wa_meta_template_id\": \"dMsTPZoK3ObfV7eYLLpNWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43168,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"text_with_url_button_dynamic_variable\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"text\": \"This is for dynamic variables in URL testing purposes\",\n                        \"type\": \"BODY\"\n                    },\n                    {\n                        \"type\": \"BUTTONS\",\n                        \"buttons\": [\n                            {\n                                \"url\": \"https://URL/{{1}}\",\n                                \"text\": \"Visit us\",\n                                \"type\": \"URL\",\n                                \"example\": [\n                                    \"sign-up/\"\n                                ]\n                            }\n                        ]\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": null,\n                \"file_url\": null,\n                \"is_url_trackable\": 0,\n                \"external_id\": \"353532864402351\",\n                \"wa_meta_template_id\": \"zg5xJSDX1QASfStvK1jEWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43170,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"multi_functional_template\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"type\": \"HEADER\",\n                        \"format\": \"IMAGE\",\n                        \"example\": {\n                            \"header_handle\": [\n                                \"https://scontent.whatsapp.net/v/t61.29466-34/417687551_1159057391897655_5095819393134377297_n.png?ccb=1-7&_nc_sid=8b1bef&_nc_ohc=TBJNc8wej10Q7kNvgFDCE4X&_nc_ht=scontent.whatsapp.net&edm=AH51TzQEAAAA&oh=01_Q5AaILFNnbbB4iIyUZHePdE01tURajzeJSa9n9jqeBDmgRtc&oe=667EC9CF\"\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"This is for text with multiple body variables, image, quick replies, phone numbers, URL, footers template testing purposes\\n\\n {{1}}\",\n                        \"type\": \"BODY\",\n                        \"example\": {\n                            \"body_text\": [\n                                [\n                                    \"Samant\"\n                                ]\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"Footer Data\",\n                        \"type\": \"FOOTER\"\n                    },\n                    {\n                        \"type\": \"BUTTONS\",\n                        \"buttons\": [\n                            {\n                                \"text\": \"Call Us\",\n                                \"type\": \"PHONE_NUMBER\",\n                                \"phone_number\": \"+917424950955\"\n                            },\n                            {\n                                \"url\": \"https://URL/{{1}}\",\n                                \"text\": \"Visit Us\",\n                                \"type\": \"URL\",\n                                \"example\": [\n                                    \"signup/\"\n                                ]\n                            },\n                            {\n                                \"text\": \"Say Hi\",\n                                \"type\": \"QUICK_REPLY\"\n                            }\n                        ]\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": null,\n                \"file_url\": null,\n                \"is_url_trackable\": 0,\n                \"external_id\": \"1159057388564322\",\n                \"wa_meta_template_id\": \"4emIF73Xk1sgRbXIMOWsWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43172,\n                \"language\": \"en_US\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"testbydatta1\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"type\": \"HEADER\",\n                        \"format\": \"IMAGE\",\n                        \"example\": {\n                            \"header_handle\": [\n                                \"https://scontent.whatsapp.net/v/t61.29466-34/431373027_845365974300856_2024113918624576260_n.png?ccb=1-7&_nc_sid=8b1bef&_nc_ohc=xcWthepE5xcQ7kNvgE3KebU&_nc_ht=scontent.whatsapp.net&edm=AH51TzQEAAAA&oh=01_Q5AaIEOAKh2aFG-D4DUgdUPUQk57Y5MTBT4HcetMhb5WXLGz&oe=667EB98C\"\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"Shop now through {{1}} and use code {{2}} to get {{3}} off of all merchandise.\",\n                        \"type\": \"BODY\",\n                        \"example\": {\n                            \"body_text\": [\n                                [\n                                    \"the end of August\",\n                                    \"25OFF\",\n                                    \"25%\"\n                                ]\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"Use the buttons below to manage your marketing subscriptions\",\n                        \"type\": \"FOOTER\"\n                    },\n                    {\n                        \"type\": \"BUTTONS\",\n                        \"buttons\": [\n                            {\n                                \"text\": \"Unsubscribe from Promos\",\n                                \"type\": \"QUICK_REPLY\"\n                            },\n                            {\n                                \"text\": \"Unsubscribe from All\",\n                                \"type\": \"QUICK_REPLY\"\n                            }\n                        ]\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": null,\n                \"file_url\": null,\n                \"is_url_trackable\": 0,\n                \"external_id\": \"845365970967523\",\n                \"wa_meta_template_id\": \"aAuaKKvFcWWcyZTMZ1hdWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43173,\n                \"language\": \"en_US\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"testbydatta12\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"type\": \"HEADER\",\n                        \"format\": \"IMAGE\",\n                        \"example\": {\n                            \"header_handle\": [\n                                \"https://scontent.whatsapp.net/v/t61.29466-34/384862431_969746294822557_2332471040823830393_n.png?ccb=1-7&_nc_sid=8b1bef&_nc_ohc=ZQsG7RrosrUQ7kNvgGQkCYM&_nc_ht=scontent.whatsapp.net&edm=AH51TzQEAAAA&oh=01_Q5AaIHYDiPJQjApf4qjUegKBC_tnW_deftPXypC0Qh4SC6_I&oe=667ED5B4\"\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"Shop now through {{1}} and use code {{2}} to get {{3}} off of all merchandise.\",\n                        \"type\": \"BODY\",\n                        \"example\": {\n                            \"body_text\": [\n                                [\n                                    \"the end of August\",\n                                    \"25OFF\",\n                                    \"25%\"\n                                ]\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"Use the buttons below to manage your marketing subscriptions\",\n                        \"type\": \"FOOTER\"\n                    },\n                    {\n                        \"type\": \"BUTTONS\",\n                        \"buttons\": [\n                            {\n                                \"text\": \"Unsubscribe from Promos\",\n                                \"type\": \"QUICK_REPLY\"\n                            },\n                            {\n                                \"text\": \"Unsubscribe from All\",\n                                \"type\": \"QUICK_REPLY\"\n                            }\n                        ]\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": null,\n                \"file_url\": null,\n                \"is_url_trackable\": 0,\n                \"external_id\": \"969746288155891\",\n                \"wa_meta_template_id\": \"vZ6ymHiZ6ZSeDvOXllpJWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43174,\n                \"language\": \"en_US\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"testbydatta000\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"type\": \"HEADER\",\n                        \"format\": \"IMAGE\",\n                        \"example\": {\n                            \"header_handle\": [\n                                \"https://scontent.whatsapp.net/v/t61.29466-34/413571944_1364967044169734_2145994230473298589_n.png?ccb=1-7&_nc_sid=8b1bef&_nc_ohc=prRdyKouOHwQ7kNvgGSsNkj&_nc_ht=scontent.whatsapp.net&edm=AH51TzQEAAAA&oh=01_Q5AaIPYS7yTe3qKufVdclWSCMEp27rEPacV-GTWuS7e0q3gI&oe=667EA8CE\"\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"Shop now through {{1}} and use code {{2}} to get {{3}} off of all merchandise.\",\n                        \"type\": \"BODY\",\n                        \"example\": {\n                            \"body_text\": [\n                                [\n                                    \"the end of August\",\n                                    \"25OFF\",\n                                    \"25%\"\n                                ]\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"Use the buttons below to manage your marketing subscriptions\",\n                        \"type\": \"FOOTER\"\n                    },\n                    {\n                        \"type\": \"BUTTONS\",\n                        \"buttons\": [\n                            {\n                                \"text\": \"Unsubscribe from Promos\",\n                                \"type\": \"QUICK_REPLY\"\n                            },\n                            {\n                                \"text\": \"Unsubscribe from All\",\n                                \"type\": \"QUICK_REPLY\"\n                            }\n                        ]\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": null,\n                \"file_url\": null,\n                \"is_url_trackable\": 0,\n                \"external_id\": \"1364967037503068\",\n                \"wa_meta_template_id\": \"acch40rzuO18ViucdpXBWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43194,\n                \"language\": \"en_US\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"testbydatta123\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"type\": \"HEADER\",\n                        \"format\": \"IMAGE\",\n                        \"example\": {\n                            \"header_handle\": [\n                                \"https://scontent.whatsapp.net/v/t61.29466-34/417341725_2188230168205341_8793176214648545785_n.png?ccb=1-7&_nc_sid=8b1bef&_nc_ohc=BQUfbI0FTo0Q7kNvgFOyHIN&_nc_ht=scontent.whatsapp.net&edm=AH51TzQEAAAA&oh=01_Q5AaIPSYJGmE4O06udPJTP-CG4TkKfnNuAH5lgFM2h7etkR5&oe=667EC5A2\"\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"Shop now through {{1}} and use code {{2}} to get {{3}} off of all merchandise.\",\n                        \"type\": \"BODY\",\n                        \"example\": {\n                            \"body_text\": [\n                                [\n                                    \"the end of August\",\n                                    \"25OFF\",\n                                    \"25%\"\n                                ]\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"Use the buttons below to manage your marketing subscriptions\",\n                        \"type\": \"FOOTER\"\n                    },\n                    {\n                        \"type\": \"BUTTONS\",\n                        \"buttons\": [\n                            {\n                                \"text\": \"Unsubscribe from Promos\",\n                                \"type\": \"QUICK_REPLY\"\n                            },\n                            {\n                                \"text\": \"Unsubscribe from All\",\n                                \"type\": \"QUICK_REPLY\"\n                            }\n                        ]\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": null,\n                \"file_url\": null,\n                \"is_url_trackable\": 0,\n                \"external_id\": \"2188230164872008\",\n                \"wa_meta_template_id\": \"FrZRMv7MVIERkTG4ZbcJWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43241,\n                \"language\": \"en_US\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"testbydatta\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"type\": \"HEADER\",\n                        \"format\": \"IMAGE\",\n                        \"example\": {\n                            \"header_handle\": [\n                                \"https://scontent.whatsapp.net/v/t61.29466-34/432260353_744784197830360_4990410684050458653_n.png?ccb=1-7&_nc_sid=8b1bef&_nc_ohc=EpyJlKhcDt0Q7kNvgFqXFd0&_nc_ht=scontent.whatsapp.net&edm=AH51TzQEAAAA&oh=01_Q5AaICBEdiJZgJ0k8LekvtOYyl3R21l_ocvUCaCCm8LOSC__&oe=667ECCFA\"\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"Shop now through {{1}} and use code {{2}} to get {{3}} off of all merchandise.\",\n                        \"type\": \"BODY\",\n                        \"example\": {\n                            \"body_text\": [\n                                [\n                                    \"the end of August\",\n                                    \"25OFF\",\n                                    \"25%\"\n                                ]\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"Use the buttons below to manage your marketing subscriptions\",\n                        \"type\": \"FOOTER\"\n                    },\n                    {\n                        \"type\": \"BUTTONS\",\n                        \"buttons\": [\n                            {\n                                \"text\": \"Unsubscribe from Promos\",\n                                \"type\": \"QUICK_REPLY\"\n                            },\n                            {\n                                \"text\": \"Unsubscribe from All\",\n                                \"type\": \"QUICK_REPLY\"\n                            }\n                        ]\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": \"IMAGE\",\n                \"file_url\": \"<Media FILE URL>\",\n                \"is_url_trackable\": 0,\n                \"external_id\": \"744784191163694\",\n                \"wa_meta_template_id\": \"HXOAsCxbYe23AbKXiOSpWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43242,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"dattaurltest1\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"type\": \"HEADER\",\n                        \"format\": \"VIDEO\",\n                        \"example\": {\n                            \"header_handle\": [\n                                \"https://scontent.whatsapp.net/v/t61.29466-34/414563089_384341237937584_4269379931791736157_n.mp4?ccb=1-7&_nc_sid=8b1bef&_nc_ohc=-SWSTXil328Q7kNvgFwKfch&_nc_ht=scontent.whatsapp.net&edm=AH51TzQEAAAA&oh=01_Q5AaIKnnCyuAVg8Iqraw3wDF4jPBf9Etj8zzFks8DKrnMZeW&oe=667EB963\"\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"🚀 *6 Days to Go! Dive into the ultimate burger adventure at Original Burger Co.,* \\nwhere Bangalore meets its first-ever smash burger delight! 🍔✨ Gear up for a flavor explosion that's set to make waves in the city.\\n #OriginalBurgerCo #BurgerRevolution #BangaloreEats\",\n                        \"type\": \"BODY\"\n                    },\n                    {\n                        \"type\": \"BUTTONS\",\n                        \"buttons\": [\n                            {\n                                \"url\": \"https://URL/{{1}}\",\n                                \"text\": \"View Location\",\n                                \"type\": \"URL\",\n                                \"example\": [\n                                    \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGF0X3VzZXJfaWQiOiIxMjM0NSIsImNhbXBhaWduX2lkIjoiY2FtcGFpZ24xMjMiLCJ0cmFja191cmxfaWQiOiJ0cmFjazQ1NiIsImlhdCI6MTY5NDAxOTQyOH0.cfWeARHpRwl2EJD8RC8pVU9WABfKH6M30Vw6RfPdzmU\"\n                                ]\n                            }\n                        ]\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": \"VIDEO\",\n                \"file_url\": \"https://scontent.whatsapp.net/v/t61.29466-34/430122743_466494875826227_271507120112378954_n.mp4?ccb=1-7&_nc_sid=8b1bef&_nc_ohc=gcyn4JhT1QUQ7kNvgHYAZne&_nc_ht=scontent.whatsapp.net&edm=AH51TzQEAAAA&oh=01_Q5AaIMkj1RvzlykbhMkqbyvoHksL0sNrqAaFXJTuF9IIc_wZ&oe=666413CA\",\n                \"is_url_trackable\": 1,\n                \"external_id\": \"384341234604251\",\n                \"wa_meta_template_id\": \"ERddUfMqqmFL8i6UNhHrWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43243,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"dattaurltest2\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"type\": \"HEADER\",\n                        \"format\": \"VIDEO\",\n                        \"example\": {\n                            \"header_handle\": [\n                                \"https://scontent.whatsapp.net/v/t61.29466-34/418882772_3401039216865468_7403878400940047266_n.mp4?ccb=1-7&_nc_sid=8b1bef&_nc_ohc=MJjvj4bnxZcQ7kNvgHmdN-x&_nc_ht=scontent.whatsapp.net&edm=AH51TzQEAAAA&oh=01_Q5AaIDhLTlaCF3-tk1Xd0qkKX4J1t64DHn0lIPJ1gTz7VVZX&oe=667ED3A4\"\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"🚀 *6 Days to Go! Dive into the ultimate burger adventure at Original Burger Co.,* \\nwhere Bangalore meets its first-ever smash burger delight! 🍔✨ Gear up for a flavor explosion that's set to make waves in the city.\\n #OriginalBurgerCo #BurgerRevolution #BangaloreEats\",\n                        \"type\": \"BODY\"\n                    },\n                    {\n                        \"type\": \"BUTTONS\",\n                        \"buttons\": [\n                            {\n                                \"url\": \"https://URL/{{1}}\",\n                                \"text\": \"View Location\",\n                                \"type\": \"URL\",\n                                \"example\": [\n                                    \"test\"\n                                ]\n                            }\n                        ]\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": \"VIDEO\",\n                \"file_url\": \"https://scontent.whatsapp.net/v/t61.29466-34/430122743_466494875826227_271507120112378954_n.mp4?ccb=1-7&_nc_sid=8b1bef&_nc_ohc=gcyn4JhT1QUQ7kNvgHYAZne&_nc_ht=scontent.whatsapp.net&edm=AH51TzQEAAAA&oh=01_Q5AaIMkj1RvzlykbhMkqbyvoHksL0sNrqAaFXJTuF9IIc_wZ&oe=666413CA\",\n                \"is_url_trackable\": 1,\n                \"external_id\": \"3401039213532135\",\n                \"wa_meta_template_id\": \"Epu1Xg0GYF09dPrz9mpDWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43244,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"dattaurltest3\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"type\": \"HEADER\",\n                        \"format\": \"VIDEO\",\n                        \"example\": {\n                            \"header_handle\": [\n                                \"https://scontent.whatsapp.net/v/t61.29466-34/417862954_971977054713164_1778257740618351935_n.mp4?ccb=1-7&_nc_sid=8b1bef&_nc_ohc=l4ofEHTOrvoQ7kNvgEIG0H1&_nc_ht=scontent.whatsapp.net&edm=AH51TzQEAAAA&oh=01_Q5AaIM_zmvA6qW8We_OEw3jhLpSzZsgy0yP9gDz8e6L8A8mt&oe=667ED515\"\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"🚀 *6 Days to Go! Dive into the ultimate burger adventure at Original Burger Co.,* \\nwhere Bangalore meets its first-ever smash burger delight! 🍔✨ Gear up for a flavor explosion that's set to make waves in the city.\\n #OriginalBurgerCo #BurgerRevolution #BangaloreEats\",\n                        \"type\": \"BODY\"\n                    },\n                    {\n                        \"type\": \"BUTTONS\",\n                        \"buttons\": [\n                            {\n                                \"url\": \"https://URL/{{1}}\",\n                                \"text\": \"View Location\",\n                                \"type\": \"URL\",\n                                \"example\": [\n                                    \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGF0X3VzZXJfaWQiOiIxMjM0NSIsImNhbXBhaWduX2lkIjoiY2FtcGFpZ24xMjMiLCJ0cmFja191cmxfaWQiOiJ0cmFjazQ1NiIsImlhdCI6MTY5NDAxOTQyOH0.cfWeARHpRwl2EJD8RC8pVU9WABfKH6M30Vw6RfPdzmU\"\n                                ]\n                            }\n                        ]\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": \"VIDEO\",\n                \"file_url\": \"https://scontent.whatsapp.net/v/t61.29466-34/430122743_466494875826227_271507120112378954_n.mp4?ccb=1-7&_nc_sid=8b1bef&_nc_ohc=gcyn4JhT1QUQ7kNvgHYAZne&_nc_ht=scontent.whatsapp.net&edm=AH51TzQEAAAA&oh=01_Q5AaIMkj1RvzlykbhMkqbyvoHksL0sNrqAaFXJTuF9IIc_wZ&oe=666413CA\",\n                \"is_url_trackable\": 1,\n                \"external_id\": \"971977048046498\",\n                \"wa_meta_template_id\": \"wmc5SYIFZGDLApG07VnCWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43284,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"test_template\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"type\": \"HEADER\",\n                        \"format\": \"VIDEO\",\n                        \"example\": {\n                            \"header_handle\": [\n                                \"https://scontent.whatsapp.net/v/t61.29466-34/417509310_1580743852705944_7510728975810933063_n.mp4?ccb=1-7&_nc_sid=8b1bef&_nc_ohc=QKFdIYTyh_0Q7kNvgGfOx_j&_nc_ht=scontent.whatsapp.net&edm=AH51TzQEAAAA&oh=01_Q5AaIH_Sg4MEp56MLZyogfTR8dQAfZduzfuxnnFF7Jkg7MoA&oe=667ED0DD\"\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"this only for testing purpose\",\n                        \"type\": \"BODY\"\n                    },\n                    {\n                        \"type\": \"BUTTONS\",\n                        \"buttons\": [\n                            {\n                                \"url\": \"https://URL/{{1}}\",\n                                \"text\": \"View Location\",\n                                \"type\": \"URL\",\n                                \"example\": [\n                                    \"test\"\n                                ]\n                            }\n                        ]\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": \"VIDEO\",\n                \"file_url\": \"https://scontent.whatsapp.net/v/t61.29466-34/430122743_466494875826227_271507120112378954_n.mp4?ccb=1-7&_nc_sid=8b1bef&_nc_ohc=gcyn4JhT1QUQ7kNvgHYAZne&_nc_ht=scontent.whatsapp.net&edm=AH51TzQEAAAA&oh=01_Q5AaIMkj1RvzlykbhMkqbyvoHksL0sNrqAaFXJTuF9IIc_wZ&oe=666413CA\",\n                \"is_url_trackable\": 1,\n                \"external_id\": \"1580743849372611\",\n                \"wa_meta_template_id\": \"TAMtP2uoKOdi0gFXKkpCWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43285,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"test_template1\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"type\": \"HEADER\",\n                        \"format\": \"VIDEO\",\n                        \"example\": {\n                            \"header_handle\": [\n                                \"https://scontent.whatsapp.net/v/t61.29466-34/431534122_419906727571363_3209297149003195430_n.mp4?ccb=1-7&_nc_sid=8b1bef&_nc_ohc=VrkXRoiZYfkQ7kNvgFmiyOL&_nc_ht=scontent.whatsapp.net&edm=AH51TzQEAAAA&oh=01_Q5AaIL4gOsNvwZdPX5opBmgBXEhdHJ0xmbdKyuvJL5NnJRB_&oe=667EAB6F\"\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"this only for testing purpose\",\n                        \"type\": \"BODY\"\n                    },\n                    {\n                        \"type\": \"BUTTONS\",\n                        \"buttons\": [\n                            {\n                                \"url\": \"https://URL/{{1}}\",\n                                \"text\": \"View Location\",\n                                \"type\": \"URL\",\n                                \"example\": [\n                                    \"test\"\n                                ]\n                            }\n                        ]\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": \"VIDEO\",\n                \"file_url\": \"https://scontent.whatsapp.net/v/t61.29466-34/430122743_466494875826227_271507120112378954_n.mp4?ccb=1-7&_nc_sid=8b1bef&_nc_ohc=gcyn4JhT1QUQ7kNvgHYAZne&_nc_ht=scontent.whatsapp.net&edm=AH51TzQEAAAA&oh=01_Q5AaIMkj1RvzlykbhMkqbyvoHksL0sNrqAaFXJTuF9IIc_wZ&oe=666413CA\",\n                \"is_url_trackable\": 1,\n                \"external_id\": \"419906724238030\",\n                \"wa_meta_template_id\": \"pV0qaUAXo2uuvkjHkSJ2WT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43286,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"text_template\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"text\": \"this only for testing purpose\",\n                        \"type\": \"BODY\"\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": null,\n                \"file_url\": null,\n                \"is_url_trackable\": 0,\n                \"external_id\": \"450131527694330\",\n                \"wa_meta_template_id\": \"kyGFSWzzadeFCuZ1TeeoWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43442,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"simple_text\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"text\": \"Hi,\\nThis is for simple text template testing\",\n                        \"type\": \"BODY\"\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 1,\n                \"file_type\": \"\",\n                \"file_url\": \"\",\n                \"is_url_trackable\": 0,\n                \"external_id\": \"944119700832721\",\n                \"wa_meta_template_id\": \"S2MBGaQvVxmKdWpTjkvQWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43570,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"test_template100\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"type\": \"HEADER\",\n                        \"format\": \"VIDEO\",\n                        \"example\": {\n                            \"header_handle\": [\n                                \"https://scontent.whatsapp.net/v/t61.29466-34/409153520_1136498894355932_5194598333405448060_n.mp4?ccb=1-7&_nc_sid=8b1bef&_nc_ohc=qNtehcfU_0wQ7kNvgHdExCH&_nc_ht=scontent.whatsapp.net&edm=AH51TzQEAAAA&oh=01_Q5AaIFJx2SSz0enhcpx-bNFMuTeuoNAQ0pDAsCtk_nd8vgFK&oe=667EC25D\"\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"this only for testing purpose\",\n                        \"type\": \"BODY\"\n                    },\n                    {\n                        \"type\": \"BUTTONS\",\n                        \"buttons\": [\n                            {\n                                \"url\": \"https://URL/{{1}}\",\n                                \"text\": \"View Location\",\n                                \"type\": \"URL\",\n                                \"example\": [\n                                    \"test\"\n                                ]\n                            }\n                        ]\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": \"VIDEO\",\n                \"file_url\": \"https://scontent.whatsapp.net/v/t61.29466-34/430122743_466494875826227_271507120112378954_n.mp4?ccb=1-7&_nc_sid=8b1bef&_nc_ohc=gcyn4JhT1QUQ7kNvgHYAZne&_nc_ht=scontent.whatsapp.net&edm=AH51TzQEAAAA&oh=01_Q5AaIMkj1RvzlykbhMkqbyvoHksL0sNrqAaFXJTuF9IIc_wZ&oe=666413CA\",\n                \"is_url_trackable\": 1,\n                \"external_id\": \"1136498891022599\",\n                \"wa_meta_template_id\": \"5jguMLyuWaEdOJOTXkRKWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43572,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"text_template_testing_purpose\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"type\": \"HEADER\",\n                        \"format\": \"VIDEO\",\n                        \"example\": {\n                            \"header_handle\": [\n                                \"https://scontent.whatsapp.net/v/t61.29466-34/409146652_420093774105724_4136010832581705681_n.mp4?ccb=1-7&_nc_sid=8b1bef&_nc_ohc=jpBkjwLCwQAQ7kNvgHnbCPH&_nc_ht=scontent.whatsapp.net&edm=AH51TzQEAAAA&oh=01_Q5AaIJiJDnY6NwlYqFOIrPsLuJPtvx3jEWR-b8I7wsiQ-ELC&oe=667EC80C\"\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"this only for testing purpose\",\n                        \"type\": \"BODY\"\n                    },\n                    {\n                        \"type\": \"BUTTONS\",\n                        \"buttons\": [\n                            {\n                                \"url\": \"https://URL/{{1}}\",\n                                \"text\": \"View Location\",\n                                \"type\": \"URL\",\n                                \"example\": [\n                                    \"test\"\n                                ]\n                            }\n                        ]\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": \"VIDEO\",\n                \"file_url\": \"https://scontent.whatsapp.net/v/t61.29466-34/430122743_466494875826227_271507120112378954_n.mp4?ccb=1-7&_nc_sid=8b1bef&_nc_ohc=gcyn4JhT1QUQ7kNvgHYAZne&_nc_ht=scontent.whatsapp.net&edm=AH51TzQEAAAA&oh=01_Q5AaIMkj1RvzlykbhMkqbyvoHksL0sNrqAaFXJTuF9IIc_wZ&oe=666413CA\",\n                \"is_url_trackable\": 1,\n                \"external_id\": \"420093770772391\",\n                \"wa_meta_template_id\": \"dfdVNQwXo46CgdkpjxHVWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43760,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"text_template2\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"type\": \"HEADER\",\n                        \"format\": \"IMAGE\",\n                        \"example\": {\n                            \"header_handle\": [\n                                \"https://scontent.whatsapp.net/v/t61.29466-34/413226854_421714523962653_7417597813519764940_n.png?ccb=1-7&_nc_sid=8b1bef&_nc_ohc=cOkL5Di0B28Q7kNvgHXDax-&_nc_ht=scontent.whatsapp.net&edm=AH51TzQEAAAA&oh=01_Q5AaIJew9QJpqCdpPxRw-oY324JcHhdJ9zCiBxpYZSmaQPkt&oe=667EBAE2\"\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"sfafdsf\",\n                        \"type\": \"BODY\"\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 1,\n                \"file_type\": \"IMAGE\",\n                \"file_url\": \"<Media FILE URL>\",\n                \"is_url_trackable\": 0,\n                \"external_id\": \"421714520629320\",\n                \"wa_meta_template_id\": \"F1Uf4QZrWr1AdG0bp7DPWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43765,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"happycode\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"text\": \"Thank you for showing your interest in Spectra! \\nTo confirm the visit, please share this code {{1}} with our representative.\\nOur team will reach out to you to take our association further.\",\n                        \"type\": \"BODY\",\n                        \"example\": {\n                            \"body_text\": [\n                                [\n                                    \"{HappyCode}\"\n                                ]\n                            ]\n                        }\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 1,\n                \"file_type\": \"\",\n                \"file_url\": \"\",\n                \"is_url_trackable\": 0,\n                \"external_id\": \"1615469849247039\",\n                \"wa_meta_template_id\": \"F6jh8evPv5NSZLvVxPOBWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43814,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"flow_template_v1\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"text\": \"Hi {{1}}, thanks for getting in touch.Please check out our services\",\n                        \"type\": \"BODY\",\n                        \"example\": {\n                            \"body_text\": [\n                                [\n                                    \"Anil\"\n                                ]\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"timesmobile\",\n                        \"type\": \"FOOTER\"\n                    },\n                    {\n                        \"type\": \"BUTTONS\",\n                        \"buttons\": [\n                            {\n                                \"text\": \"Proceed\",\n                                \"type\": \"FLOW\",\n                                \"flow_id\": 7512518952198821,\n                                \"flow_action\": \"NAVIGATE\",\n                                \"navigate_screen\": \"QUESTION_ONE\"\n                            }\n                        ]\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": null,\n                \"file_url\": null,\n                \"is_url_trackable\": 0,\n                \"external_id\": \"450483947571947\",\n                \"wa_meta_template_id\": \"D1do2pVZkBTzeYzSyIQfWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43862,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"flow_template_v2\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"text\": \"Hi {{1}}, thanks for getting in touch.Please check out our plans\",\n                        \"type\": \"BODY\",\n                        \"example\": {\n                            \"body_text\": [\n                                [\n                                    \"Anil\"\n                                ]\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"timesmobile\",\n                        \"type\": \"FOOTER\"\n                    },\n                    {\n                        \"type\": \"BUTTONS\",\n                        \"buttons\": [\n                            {\n                                \"text\": \"Proceed\",\n                                \"type\": \"FLOW\",\n                                \"flow_id\": 1147587719910555,\n                                \"flow_action\": \"NAVIGATE\",\n                                \"navigate_screen\": \"QUESTION_ONE\"\n                            }\n                        ]\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": null,\n                \"file_url\": null,\n                \"is_url_trackable\": 0,\n                \"external_id\": \"1187636345560600\",\n                \"wa_meta_template_id\": \"gvwJMXkLDVKCik6ApgYGWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43863,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"flow_template_v3\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"text\": \"Hi {{1}}, thanks for getting in touch.Please check out our plans\",\n                        \"type\": \"BODY\",\n                        \"example\": {\n                            \"body_text\": [\n                                [\n                                    \"Anil\"\n                                ]\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"timesmobile\",\n                        \"type\": \"FOOTER\"\n                    },\n                    {\n                        \"type\": \"BUTTONS\",\n                        \"buttons\": [\n                            {\n                                \"text\": \"Choose Plan\",\n                                \"type\": \"FLOW\",\n                                \"flow_id\": 1147587719910555,\n                                \"flow_action\": \"NAVIGATE\",\n                                \"navigate_screen\": \"QUESTION_ONE\"\n                            }\n                        ]\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": null,\n                \"file_url\": null,\n                \"is_url_trackable\": 0,\n                \"external_id\": \"984137916647012\",\n                \"wa_meta_template_id\": \"TfqMwkIqeyT8MEa6R3jRWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43865,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"flow_template_v4\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"text\": \"Hi {{1}}, thanks for getting in touch.Please check out our plans\",\n                        \"type\": \"BODY\",\n                        \"example\": {\n                            \"body_text\": [\n                                [\n                                    \"Anil\"\n                                ]\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"timesmobile\",\n                        \"type\": \"FOOTER\"\n                    },\n                    {\n                        \"type\": \"BUTTONS\",\n                        \"buttons\": [\n                            {\n                                \"text\": \"Choose Plan\",\n                                \"type\": \"FLOW\",\n                                \"flow_id\": 3545692019025635,\n                                \"flow_action\": \"NAVIGATE\",\n                                \"navigate_screen\": \"QUESTION_ONE\"\n                            }\n                        ]\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": null,\n                \"file_url\": null,\n                \"is_url_trackable\": 0,\n                \"external_id\": \"452479997470031\",\n                \"wa_meta_template_id\": \"snpYoXjW9E1qHlZJv3aHWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 44285,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"flow_template_v6\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"type\": \"HEADER\",\n                        \"format\": \"IMAGE\",\n                        \"example\": {\n                            \"header_handle\": [\n                                \"https://scontent.whatsapp.net/v/t61.29466-34/417265704_440076585472471_4648360323754275655_n.jpg?ccb=1-7&_nc_sid=8b1bef&_nc_ohc=_NXlvEcYnyoQ7kNvgFMv1PU&_nc_ht=scontent.whatsapp.net&edm=AH51TzQEAAAA&oh=01_Q5AaIESFYEoBgBqeARbYKqZE-LcWhPitDzsF8K2sm0azwJ-m&oe=667ECF50\"\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"Welcome to the plan selection, Please click on the button to proceed further.\",\n                        \"type\": \"BODY\"\n                    },\n                    {\n                        \"text\": \"timesmobile\",\n                        \"type\": \"FOOTER\"\n                    },\n                    {\n                        \"type\": \"BUTTONS\",\n                        \"buttons\": [\n                            {\n                                \"text\": \"Choose Plans\",\n                                \"type\": \"FLOW\",\n                                \"flow_id\": 1432420630730082,\n                                \"flow_action\": \"NAVIGATE\",\n                                \"navigate_screen\": \"QUESTION_ONE\"\n                            }\n                        ]\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": null,\n                \"file_url\": null,\n                \"is_url_trackable\": 0,\n                \"external_id\": \"440076582139138\",\n                \"wa_meta_template_id\": \"LYsLGMsEmV4pPdI5oLzuWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 44286,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"flow_template_v5\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"type\": \"HEADER\",\n                        \"format\": \"IMAGE\",\n                        \"example\": {\n                            \"header_handle\": [\n                                \"https://scontent.whatsapp.net/v/t61.29466-34/322100300_1472951206696875_694258948409703470_n.jpg?ccb=1-7&_nc_sid=8b1bef&_nc_ohc=IY1RoN2HlasQ7kNvgGeoNLj&_nc_ht=scontent.whatsapp.net&edm=AH51TzQEAAAA&oh=01_Q5AaIERubueVmZzOl_HrJu3UNMQjgHUrz0kiS8_7_0JwFCxg&oe=667EB7BE\"\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"Welcome to the plan selection, Please click on the button to proceed further.\",\n                        \"type\": \"BODY\"\n                    },\n                    {\n                        \"text\": \"timesmobile\",\n                        \"type\": \"FOOTER\"\n                    },\n                    {\n                        \"type\": \"BUTTONS\",\n                        \"buttons\": [\n                            {\n                                \"text\": \"Choose Plans\",\n                                \"type\": \"FLOW\",\n                                \"flow_id\": 1432420630730082,\n                                \"flow_action\": \"NAVIGATE\",\n                                \"navigate_screen\": \"QUESTION_ONE\"\n                            }\n                        ]\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": null,\n                \"file_url\": null,\n                \"is_url_trackable\": 0,\n                \"external_id\": \"1472951203363542\",\n                \"wa_meta_template_id\": \"zt5xy8TZaelpx2QnNojXWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 44722,\n                \"language\": \"en_US\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"order_delivery_update\",\n                \"category\": \"UTILITY\",\n                \"components\": [\n                    {\n                        \"type\": \"HEADER\",\n                        \"format\": \"LOCATION\"\n                    },\n                    {\n                        \"text\": \"Good news {{1}}! Your order #{{2}} is on its way to the location above. Thank you for your order!\",\n                        \"type\": \"BODY\",\n                        \"example\": {\n                            \"body_text\": [\n                                [\n                                    \"Mark\",\n                                    \"566701\"\n                                ]\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"To stop receiving delivery updates, tap the button below.\",\n                        \"type\": \"FOOTER\"\n                    },\n                    {\n                        \"type\": \"BUTTONS\",\n                        \"buttons\": [\n                            {\n                                \"text\": \"Stop Delivery Updates\",\n                                \"type\": \"QUICK_REPLY\"\n                            }\n                        ]\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": null,\n                \"file_url\": null,\n                \"is_url_trackable\": 0,\n                \"external_id\": \"897048725559479\",\n                \"wa_meta_template_id\": \"GChW5V8oG6hsO0VKdk3DWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 44723,\n                \"language\": \"en_US\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"intro_catalog_offer\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"text\": \"Now shop for your favourite products right here on WhatsApp! Get Rs {{1}} off on all orders above {{2}}Rs! Valid for your first {{3}} orders placed on WhatsApp!\",\n                        \"type\": \"BODY\",\n                        \"example\": {\n                            \"body_text\": [\n                                [\n                                    \"100\",\n                                    \"400\",\n                                    \"3\"\n                                ]\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"Best grocery deals on WhatsApp!\",\n                        \"type\": \"FOOTER\"\n                    },\n                    {\n                        \"type\": \"BUTTONS\",\n                        \"buttons\": [\n                            {\n                                \"text\": \"View catalog\",\n                                \"type\": \"CATALOG\"\n                            }\n                        ]\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": null,\n                \"file_url\": null,\n                \"is_url_trackable\": 0,\n                \"external_id\": \"1636185983839889\",\n                \"wa_meta_template_id\": \"0nTMaY9bqCvNbyBnbj3YWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 44724,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"testing_template_campaign\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"text\": \"testing purpose ke leye\",\n                        \"type\": \"BODY\"\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 1,\n                \"file_type\": \"\",\n                \"file_url\": \"\",\n                \"is_url_trackable\": 0,\n                \"external_id\": \"371259539270753\",\n                \"wa_meta_template_id\": \"SHuCftLfzfukV231aqjuWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 44727,\n                \"language\": \"en_US\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"coupon_code_fall2023_25off\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"text\": \"Our Fall Sale is on!\",\n                        \"type\": \"HEADER\",\n                        \"format\": \"TEXT\"\n                    },\n                    {\n                        \"text\": \"Shop now through November and use code {{1}} to get {{2}} off of all merchandise!\",\n                        \"type\": \"BODY\",\n                        \"example\": {\n                            \"body_text\": [\n                                [\n                                    \"25OFF\",\n                                    \"25%\"\n                                ]\n                            ]\n                        }\n                    },\n                    {\n                        \"type\": \"BUTTONS\",\n                        \"buttons\": [\n                            {\n                                \"text\": \"Unsubscribe\",\n                                \"type\": \"QUICK_REPLY\"\n                            },\n                            {\n                                \"text\": \"Copy offer code\",\n                                \"type\": \"COPY_CODE\",\n                                \"example\": [\n                                    \"250FF\"\n                                ]\n                            }\n                        ]\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": null,\n                \"file_url\": null,\n                \"is_url_trackable\": 0,\n                \"external_id\": \"1117858889274085\",\n                \"wa_meta_template_id\": \"QnMlpV77rOPjfILfABc8WT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 44728,\n                \"language\": \"en_US\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"limited_time_offer_caribbean_pkg_2023\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"text\": \"Good news, {{1}}! Use code {{2}} to get 25% off all Caribbean Destination packages!\",\n                        \"type\": \"BODY\",\n                        \"example\": {\n                            \"body_text\": [\n                                [\n                                    \"Pablo\",\n                                    \"CARIBE25\"\n                                ]\n                            ]\n                        }\n                    },\n                    {\n                        \"type\": \"LIMITED_TIME_OFFER\",\n                        \"limited_time_offer\": {\n                            \"text\": \"Expiring offer!\",\n                            \"has_expiration\": true\n                        }\n                    },\n                    {\n                        \"type\": \"BUTTONS\",\n                        \"buttons\": [\n                            {\n                                \"text\": \"Copy offer code\",\n                                \"type\": \"COPY_CODE\",\n                                \"example\": [\n                                    \"CARIBE25\"\n                                ]\n                            },\n                            {\n                                \"url\": \"https://URL?code={{1}}\",\n                                \"text\": \"Book now!\",\n                                \"type\": \"URL\",\n                                \"example\": [\n                                    \"test\"\n                                ]\n                            }\n                        ]\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": null,\n                \"file_url\": null,\n                \"is_url_trackable\": 0,\n                \"external_id\": \"1651016875659591\",\n                \"wa_meta_template_id\": \"4tWoPw4FQSQij6xCzmWzWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 44731,\n                \"language\": \"en_US\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"abandoned_cart\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"text\": \"Forget something, {{1}}?\",\n                        \"type\": \"HEADER\",\n                        \"format\": \"TEXT\",\n                        \"example\": {\n                            \"header_text\": [\n                                \"Pablo\"\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"Looks like you left these items in your cart, still interested? Use code {{1}} to get 10% off!\",\n                        \"type\": \"BODY\",\n                        \"example\": {\n                            \"body_text\": [\n                                [\n                                    \"10OFF\"\n                                ]\n                            ]\n                        }\n                    },\n                    {\n                        \"type\": \"BUTTONS\",\n                        \"buttons\": [\n                            {\n                                \"text\": \"View items\",\n                                \"type\": \"MPM\"\n                            }\n                        ]\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": null,\n                \"file_url\": null,\n                \"is_url_trackable\": 0,\n                \"external_id\": \"826605596194945\",\n                \"wa_meta_template_id\": \"W7VPTmp2XgcpBVY5PLH5WT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            }\n        ],\n        \"total\": 48\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Template List With Pagination",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{APIKEY}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"page_number\":1,\n   \"page_size\":10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/wa/v1/templates/get-list",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"wa",
+						"v1",
+						"templates",
+						"get-list"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{APIKEY}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"page_number\":1,\n   \"page_size\":10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/wa/v1/templates/get-list",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"wa",
+								"v1",
+								"templates",
+								"get-list"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "7969"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1f21-72UnM/Z2PyMjbBM77AMRcGKoU5o\""
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "connect.sid=s%3AfTx6XEfiILafDNo7Vth0gVZWlYTG0imY.Do0JCuyAR6j8npmnRMyM%2BPAYWr%2FgAV7hn80f4xMoCms; Path=/; HttpOnly"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 30 May 2024 11:49:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"Template Fetched Successfully\",\n    \"code\": 200,\n    \"res_json\": {\n        \"data\": [\n            {\n                \"whatsapp_template_id\": 43143,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"sample_teatingvarible\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"type\": \"HEADER\",\n                        \"format\": \"IMAGE\",\n                        \"example\": {\n                            \"header_handle\": [\n                                \"IMAGE_URL\"\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"BODY\",\n                        \"type\": \"BODY\",\n                        \"example\": {\n                            \"body_text\": [\n                                [\n                                    \"VARIABLE IF ANY IN BODY\"\n                                ]\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"To Opt Out, Click Stop\",\n                        \"type\": \"FOOTER\"\n                    },\n                    {\n                        \"type\": \"BUTTONS\",\n                        \"buttons\": [\n                            {\n                                \"url\": \"https://URL/{{1}}\",\n                                \"text\": \"Visit Website\",\n                                \"type\": \"URL\",\n                                \"example\": [\n                                    \"fdffddtggtdfrtgtg\"\n                                ]\n                            },\n                            {\n                                \"text\": \"Call Now\",\n                                \"type\": \"PHONE_NUMBER\",\n                                \"phone_number\": \"+91XXXXXXXXXX\"\n                            },\n                            {\n                                \"text\": \"Stop\",\n                                \"type\": \"QUICK_REPLY\"\n                            }\n                        ]\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 1,\n                \"file_type\": \"IMAGE\",\n                \"file_url\": \"<MEDIA_FILE_URL>\",\n                \"is_url_trackable\": 0,\n                \"external_id\": \"982390659616790\",\n                \"wa_meta_template_id\": \"IAsXD82awbbkWFetO6nqWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43145,\n                \"language\": \"en_US\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"seasonal_promotion1\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"text\": \"Our {{1}} is on!\",\n                        \"type\": \"HEADER\",\n                        \"format\": \"TEXT\",\n                        \"example\": {\n                            \"header_text\": [\n                                \"Summer Sale\"\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"Shop now through {{1}} and use code {{2}} to get {{3}} off of all merchandise.\",\n                        \"type\": \"BODY\",\n                        \"example\": {\n                            \"body_text\": [\n                                [\n                                    \"the end of August\",\n                                    \"25OFF\",\n                                    \"25%\"\n                                ]\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"Use the buttons below to manage your marketing subscriptions\",\n                        \"type\": \"FOOTER\"\n                    },\n                    {\n                        \"type\": \"BUTTONS\",\n                        \"buttons\": [\n                            {\n                                \"text\": \"Unsubscribe from Promos\",\n                                \"type\": \"QUICK_REPLY\"\n                            },\n                            {\n                                \"text\": \"Unsubscribe from All\",\n                                \"type\": \"QUICK_REPLY\"\n                            }\n                        ]\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": null,\n                \"file_url\": null,\n                \"is_url_trackable\": 0,\n                \"external_id\": \"773766354874592\",\n                \"wa_meta_template_id\": \"eX0IS2VHHkgPE4nRgNHGWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43146,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"hf_template\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"text\": \"hi\",\n                        \"type\": \"HEADER\",\n                        \"format\": \"TEXT\"\n                    },\n                    {\n                        \"text\": \"This is header footer template testing\",\n                        \"type\": \"BODY\"\n                    },\n                    {\n                        \"text\": \"thank you\",\n                        \"type\": \"FOOTER\"\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 1,\n                \"file_type\": \"\",\n                \"file_url\": \"\",\n                \"is_url_trackable\": 0,\n                \"external_id\": \"950102786844676\",\n                \"wa_meta_template_id\": \"RxXR52NuAIF9YtJRhqihWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43149,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"header_type_text_with_var_template\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"text\": \"Namestey,\",\n                        \"type\": \"HEADER\",\n                        \"format\": \"TEXT\"\n                    },\n                    {\n                        \"text\": \"{{1}}, This is text with  Header type (text) and with multiple body variables\\ntemplate for testing purpose\\n {{2}}\",\n                        \"type\": \"BODY\",\n                        \"example\": {\n                            \"body_text\": [\n                                [\n                                    \"Samant\",\n                                    \"Anil\"\n                                ]\n                            ]\n                        }\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": null,\n                \"file_url\": null,\n                \"is_url_trackable\": 0,\n                \"external_id\": \"765654465666974\",\n                \"wa_meta_template_id\": \"eIQbtyeCr9fjClcces9qWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43150,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"multiple_body_variable_with_quick_reply_btn\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"text\": \"{{1}} \\n\\nThis is for text with multiple body variable and quick reply button template testing purpose\\n\\n {{2}}  {{3}}\",\n                        \"type\": \"BODY\",\n                        \"example\": {\n                            \"body_text\": [\n                                [\n                                    \"Mandeep\",\n                                    \"Anil\",\n                                    \"Kumar\"\n                                ]\n                            ]\n                        }\n                    },\n                    {\n                        \"type\": \"BUTTONS\",\n                        \"buttons\": [\n                            {\n                                \"text\": \"Say Hi\",\n                                \"type\": \"QUICK_REPLY\"\n                            }\n                        ]\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": null,\n                \"file_url\": null,\n                \"is_url_trackable\": 0,\n                \"external_id\": \"444447028072984\",\n                \"wa_meta_template_id\": \"f3OkNuA5f8a42oNlEN7wWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43151,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"variable_in_header_and_body\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"text\": \"Hi {{1}},\",\n                        \"type\": \"HEADER\",\n                        \"format\": \"TEXT\",\n                        \"example\": {\n                            \"header_text\": [\n                                \"Ashish\"\n                            ]\n                        }\n                    },\n                    {\n                        \"text\": \"{{1}}, This is for text with Header Type (text with a variable in header text)  and with multiple body variables template for testing purpose. \\n\\n {{2}}\",\n                        \"type\": \"BODY\",\n                        \"example\": {\n                            \"body_text\": [\n                                [\n                                    \"Ashish\",\n                                    \"Anil\"\n                                ]\n                            ]\n                        }\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": null,\n                \"file_url\": null,\n                \"is_url_trackable\": 0,\n                \"external_id\": \"996833468656210\",\n                \"wa_meta_template_id\": \"kYTFsjsoY8ZPWdMzLzHVWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43152,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"simple_header_type_text_template\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"text\": \"Hi Mandeep\",\n                        \"type\": \"HEADER\",\n                        \"format\": \"TEXT\"\n                    },\n                    {\n                        \"text\": \"this is for simple header type text template testing purpose\",\n                        \"type\": \"BODY\"\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": null,\n                \"file_url\": null,\n                \"is_url_trackable\": 0,\n                \"external_id\": \"244728525366434\",\n                \"wa_meta_template_id\": \"QiV5psiPp11jlDLFTcw2WT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43153,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"multiple_body_variable_with_call_action_btn\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"text\": \"{{1}} \\n\\nthis is for multiple body variable with call action btn template testing purpose\\n\\n {{2}}  {{3}}\",\n                        \"type\": \"BODY\",\n                        \"example\": {\n                            \"body_text\": [\n                                [\n                                    \"Ashish\",\n                                    \"Shubham\",\n                                    \"Sharma\"\n                                ]\n                            ]\n                        }\n                    },\n                    {\n                        \"type\": \"BUTTONS\",\n                        \"buttons\": [\n                            {\n                                \"text\": \"Call us\",\n                                \"type\": \"PHONE_NUMBER\",\n                                \"phone_number\": \"+919999999999\"\n                            }\n                        ]\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": null,\n                \"file_url\": null,\n                \"is_url_trackable\": 0,\n                \"external_id\": \"894418642440517\",\n                \"wa_meta_template_id\": \"UHglFkLnYTfMgfiAq3LJWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43155,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"text_template_with_quick_reply_buttons\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"text\": \"This is for text with quick reply buttons testing purpose\",\n                        \"type\": \"BODY\"\n                    },\n                    {\n                        \"type\": \"BUTTONS\",\n                        \"buttons\": [\n                            {\n                                \"text\": \"Quick Reply\",\n                                \"type\": \"QUICK_REPLY\"\n                            }\n                        ]\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": null,\n                \"file_url\": null,\n                \"is_url_trackable\": 0,\n                \"external_id\": \"1643796256363056\",\n                \"wa_meta_template_id\": \"xayfOyrSbCap8g8JbpGEWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            },\n            {\n                \"whatsapp_template_id\": 43156,\n                \"language\": \"en\",\n                \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n                \"name\": \"text_template_without_variable\",\n                \"category\": \"MARKETING\",\n                \"components\": [\n                    {\n                        \"text\": \"This is for text template without variable testing purpose\",\n                        \"type\": \"BODY\"\n                    }\n                ],\n                \"status\": \"approved\",\n                \"allow_category_change\": 0,\n                \"file_type\": null,\n                \"file_url\": null,\n                \"is_url_trackable\": 0,\n                \"external_id\": \"829568615870034\",\n                \"wa_meta_template_id\": \"Y1WoEe4c4zhBiobpUp5lWT\",\n                \"quality_score_reasons\": null,\n                \"quality_score\": \"UNKNOWN\",\n                \"rejected_reason\": \"NONE\",\n                \"updated_external\": 1\n            }\n        ],\n        \"total\": 48\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Template By Name",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{APIKEY}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"template_name\": \"sample_teatingvarible\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/wa/v1/templates/get-template-by-name",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"wa",
+						"v1",
+						"templates",
+						"get-template-by-name"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{APIKEY}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"template_name\": \"sample_teatingvarible\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/wa/v1/templates/get-template-by-name",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"wa",
+								"v1",
+								"templates",
+								"get-template-by-name"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1715"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"6b3-QFpAgwoxKYmUTsklYgQIb2xbKyo\""
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "connect.sid=s%3AfTx6XEfiILafDNo7Vth0gVZWlYTG0imY.Do0JCuyAR6j8npmnRMyM%2BPAYWr%2FgAV7hn80f4xMoCms; Path=/; HttpOnly"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 30 May 2024 11:42:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"Template Fetched Successfully\",\n    \"code\": 200,\n    \"res_json\": {\n        \"whatsapp_template_id\": 43143,\n        \"language\": \"en\",\n        \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n        \"name\": \"sample_teatingvarible\",\n        \"version\": \"v2\",\n        \"category\": \"MARKETING\",\n        \"components\": [\n            {\n                \"type\": \"HEADER\",\n                \"format\": \"IMAGE\",\n                \"example\": {\n                    \"header_handle\": [\n                        \"IMAGE_URL\"\n                    ]\n                }\n            },\n            {\n                \"text\": \"BODY\",\n                \"type\": \"BODY\",\n                \"example\": {\n                    \"body_text\": [\n                        [\n                            \"VARIABLE VALUE IF ANY IN BODY\"\n                        ]\n                    ]\n                }\n            },\n            {\n                \"text\": \"To Opt Out, Click Stop\",\n                \"type\": \"FOOTER\"\n            },\n            {\n                \"type\": \"BUTTONS\",\n                \"buttons\": [\n                    {\n                        \"url\": \"https://URL/{{1}}\",\n                        \"text\": \"Visit Website\",\n                        \"type\": \"URL\",\n                        \"example\": [\n                            \"fdffddtggtdfrtgtg\"\n                        ]\n                    },\n                    {\n                        \"text\": \"Call Now\",\n                        \"type\": \"PHONE_NUMBER\",\n                        \"phone_number\": \"+91XXXXXXXXXX\"\n                    },\n                    {\n                        \"text\": \"Stop\",\n                        \"type\": \"QUICK_REPLY\"\n                    }\n                ]\n            }\n        ],\n        \"status\": \"approved\",\n        \"allow_category_change\": 1,\n        \"file_type\": \"IMAGE\",\n        \"file_url\": \"<MEDIA_FILE_URL>\",\n        \"is_url_trackable\": 0,\n        \"external_id\": \"982390659616790\",\n        \"wa_meta_template_id\": \"IAsXD82awbbkWFetO6nqWT\",\n        \"quality_score_reasons\": null,\n        \"quality_score\": \"UNKNOWN\",\n        \"rejected_reason\": \"NONE\",\n        \"updated_external\": 1\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Template By Id",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{APIKEY}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"whatsapp_template_id\": 43143\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/wa/v1/templates/get-template-by-id",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"wa",
+						"v1",
+						"templates",
+						"get-template-by-id"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{APIKEY}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"whatsapp_template_id\": 43143\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/wa/v1/templates/get-template-by-id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"wa",
+								"v1",
+								"templates",
+								"get-template-by-id"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1715"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"6b3-QFpAgwoxKYmUTsklYgQIb2xbKyo\""
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "connect.sid=s%3AfTx6XEfiILafDNo7Vth0gVZWlYTG0imY.Do0JCuyAR6j8npmnRMyM%2BPAYWr%2FgAV7hn80f4xMoCms; Path=/; HttpOnly"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 30 May 2024 11:45:21 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"Template Fetched Successfully\",\n    \"code\": 200,\n    \"res_json\": {\n        \"whatsapp_template_id\": 43143,\n        \"language\": \"en\", // template Language\n        \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n        \"name\": \"TEMPLATE NAME\",\n        \"version\": \"v2\",\n        \"category\": \"MARKETING\",\n        \"components\": [\n            {\n                \"type\": \"HEADER\",\n                \"format\": \"IMAGE\",\n                \"example\": {\n                    \"header_handle\": [\n                        \"IMAGE-URL\"\n                    ]\n                }\n            },\n            {\n                \"text\": \"BODY\",\n                \"type\": \"BODY\",\n                \"example\": {\n                    \"body_text\": [\n                        [\n                            \"VARIABLE VALUE IF ANY IN BODY\"\n                        ]\n                    ]\n                }\n            },\n            {\n                \"text\": \"To Opt Out, Click Stop\",\n                \"type\": \"FOOTER\"\n            },\n            {\n                \"type\": \"BUTTONS\",\n                \"buttons\": [\n                    {\n                        \"url\": \"https://URL/{{1}}\",\n                        \"text\": \"Visit Website\",\n                        \"type\": \"URL\",\n                        \"example\": [\n                            \"fdffddtggtdfrtgtg\"\n                        ]\n                    },\n                    {\n                        \"text\": \"Call Now\",\n                        \"type\": \"PHONE_NUMBER\",\n                        \"phone_number\": \"+91XXXXXXXXXX\"\n                    },\n                    {\n                        \"text\": \"Stop\",\n                        \"type\": \"QUICK_REPLY\"\n                    }\n                ]\n            }\n        ],\n        \"status\": \"approved\",\n        \"allow_category_change\": 1,\n        \"file_type\": \"IMAGE\",\n        \"file_url\": \"<MEDIA_FILE_URL>\",\n        \"is_url_trackable\": 0,\n        \"external_id\": \"982390659616790\",\n        \"wa_meta_template_id\": \"IAsXD82awbbkWFetO6nqWT\",\n        \"quality_score_reasons\": null,\n        \"quality_score\": \"UNKNOWN\",\n        \"rejected_reason\": \"NONE\",\n        \"updated_external\": 1\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Create Catalog Type Template",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{APIKEY}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"catalog_type_template\",\n    \"language\": \"en_US\",\n    \"category\": \"MARKETING\",\n    \"components\": [\n        {\n            \"type\": \"BODY\",\n            \"text\": \"Now shop for your favourite products right here on WhatsApp! Get Rs {{1}} off on all orders above {{2}}Rs! Valid for your first {{3}} orders placed on WhatsApp!\",\n            \"example\": {\n                \"body_text\": [\n                    [\n                        \"100\",\n                        \"400\",\n                        \"3\"\n                    ]\n                ]\n            }\n        },\n        {\n            \"type\": \"FOOTER\",\n            \"text\": \"Best grocery deals on WhatsApp!\"\n        },\n        {\n            \"type\": \"BUTTONS\",\n            \"buttons\": [\n                {\n                    \"type\": \"CATALOG\",\n                    \"text\": \"View catalog\"\n                }\n            ]\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/wa/v1/templates/create-template",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"wa",
+						"v1",
+						"templates",
+						"create-template"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{APIKEY}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"catalog_type_template\",\n    \"language\": \"en_US\",\n    \"category\": \"MARKETING\",\n    \"components\": [\n        {\n            \"type\": \"BODY\",\n            \"text\": \"Now shop for your favourite products right here on WhatsApp! Get Rs {{1}} off on all orders above {{2}}Rs! Valid for your first {{3}} orders placed on WhatsApp!\",\n            \"example\": {\n                \"body_text\": [\n                    [\n                        \"100\",\n                        \"400\",\n                        \"3\"\n                    ]\n                ]\n            }\n        },\n        {\n            \"type\": \"FOOTER\",\n            \"text\": \"Best grocery deals on WhatsApp!\"\n        },\n        {\n            \"type\": \"BUTTONS\",\n            \"buttons\": [\n                {\n                    \"type\": \"CATALOG\",\n                    \"text\": \"View catalog\"\n                }\n            ]\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/wa/v1/templates/create-template",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"wa",
+								"v1",
+								"templates",
+								"create-template"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 31 May 2024 08:23:35 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "AWSALBTG=Kx3Kn5l3OpIX1mdL5F1FfsKbLSxAJzHsPtYG8U6cFpaXtAYzsLBr+s+29Vf1fLK7kso73M6GKqJVGR3VGl+oywfveN73f9FeU8JMvN3243T97byg4q8wIuu91k2L7z+d3d+PhVZt3jnNchO5Mo0KvxhkSBYgsblKQ7HGFPHIdxl9pl+hJoE=; Expires=Fri, 07 Jun 2024 08:23:31 GMT; Path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "AWSALBTGCORS=Kx3Kn5l3OpIX1mdL5F1FfsKbLSxAJzHsPtYG8U6cFpaXtAYzsLBr+s+29Vf1fLK7kso73M6GKqJVGR3VGl+oywfveN73f9FeU8JMvN3243T97byg4q8wIuu91k2L7z+d3d+PhVZt3jnNchO5Mo0KvxhkSBYgsblKQ7HGFPHIdxl9pl+hJoE=; Expires=Fri, 07 Jun 2024 08:23:31 GMT; Path=/; SameSite=None; Secure"
+						},
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0 (Ubuntu)"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"25b-MNu0eB1B7TGtx1h+lyDRATqkad0\""
+						},
+						{
+							"key": "set-cookie",
+							"value": "connect.sid=s%3Acihdajlx1JBRR7fAqxBOtw24CxhUX1w6.tk6Z2HvaDtuKXtT7w3BANYe12eVapcGU%2BwKZussuYFU; Path=/; HttpOnly"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"Success\",\n    \"code\": 200,\n    \"res_json\": {\n        \"category\": \"MARKETING\",\n        \"components\": [\n            {\n                \"example\": {\n                    \"body_text\": [\n                        [\n                            \"100\",\n                            \"400\",\n                            \"3\"\n                        ]\n                    ]\n                },\n                \"text\": \"Now shop for your favourite products right here on WhatsApp! Get Rs {{1}} off on all orders above {{2}}Rs! Valid for your first {{3}} orders placed on WhatsApp!\",\n                \"type\": \"BODY\"\n            },\n            {\n                \"text\": \"Best grocery deals on WhatsApp!\",\n                \"type\": \"FOOTER\"\n            },\n            {\n                \"buttons\": [\n                    {\n                        \"text\": \"View catalog\",\n                        \"type\": \"CATALOG\"\n                    }\n                ],\n                \"type\": \"BUTTONS\"\n            }\n        ],\n        \"language\": \"en_US\",\n        \"name\": \"catalog_type_template\",\n        \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n        \"rejected_reason\": null,\n        \"status\": \"submitted\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Create Carousel Type Template",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{APIKEY}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"carousel_type_template\",\n    \"language\": \"en_US\",\n    \"category\": \"MARKETING\",\n    \"components\": [\n        {\n            \"type\": \"BODY\",\n            \"text\": \"Summer is here, and we have the freshest produce around! Use code {{1}} to get {{2}} off your next order.\",\n            \"example\": {\n                \"body_text\": [\n                    [\n                        \"15OFF\",\n                        \"15%\"\n                    ]\n                ]\n            }\n        },\n        {\n            \"type\": \"CAROUSEL\",\n            \"cards\": [\n                {\n                    \"components\": [\n                        {\n                            \"type\": \"HEADER\",\n                            \"format\": \"IMAGE\",\n                            \"example\": {\n                                \"header_handle\": [\n                                    \"<MEDIA_HANDLE>\"\n                                ]\n                            }\n                        },\n                        {\n                            \"type\": \"BODY\",\n                            \"text\": \"Rare lemons for unique cocktails. Use code {{1}} to get {{2}} off all produce.\",\n                            \"example\": {\n                                \"body_text\": [\n                                    [\n                                        \"15OFF\",\n                                        \"15%\"\n                                    ]\n                                ]\n                            }\n                        },\n                        {\n                            \"type\": \"BUTTONS\",\n                            \"buttons\": [\n                                {\n                                    \"type\": \"QUICK_REPLY\",\n                                    \"text\": \"Send more like this\"\n                                },\n                                {\n                                    \"type\": \"URL\",\n                                    \"text\": \"Buy now\",\n                                    \"url\": \"<BASE_URL>/shop?promo={{1}}\",\n                                    \"example\": [\n                                        \"example variable\"\n                                    ]\n                                }\n                            ]\n                        }\n                    ]\n                },\n                {\n                    \"components\": [\n                        {\n                            \"type\": \"HEADER\",\n                            \"format\": \"IMAGE\",\n                            \"example\": {\n                                \"header_handle\": [\n                                    \"<MEDIA_HANDLE>\"\n                                ]\n                            }\n                        },\n                        {\n                            \"type\": \"BODY\",\n                            \"text\": \"Exotic fruit for unique cocktails! Use code {{1}} to get {{2}} off all exotic produce.\",\n                            \"example\": {\n                                \"body_text\": [\n                                    [\n                                        \"20OFFEXOTIC\",\n                                        \"20%\"\n                                    ]\n                                ]\n                            }\n                        },\n                        {\n                            \"type\": \"BUTTONS\",\n                            \"buttons\": [\n                                {\n                                    \"type\": \"QUICK_REPLY\",\n                                    \"text\": \"Send more like this\"\n                                },\n                                {\n                                    \"type\": \"URL\",\n                                    \"text\": \"Buy now\",\n                                    \"url\": \"<BASE_URL>/shop?promo={{1}}\",\n                                    \"example\": [\n                                        \"example variable\"\n                                    ]\n                                }\n                            ]\n                        }\n                    ]\n                }\n            ]\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/wa/v1/templates/create-template",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"wa",
+						"v1",
+						"templates",
+						"create-template"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{APIKEY}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"carousel_type_template\",\n    \"language\": \"en_US\",\n    \"category\": \"MARKETING\",\n    \"components\": [\n        {\n            \"type\": \"BODY\",\n            \"text\": \"Summer is here, and we have the freshest produce around! Use code {{1}} to get {{2}} off your next order.\",\n            \"example\": {\n                \"body_text\": [\n                    [\n                        \"15OFF\",\n                        \"15%\"\n                    ]\n                ]\n            }\n        },\n        {\n            \"type\": \"CAROUSEL\",\n            \"cards\": [\n                {\n                    \"components\": [\n                        {\n                            \"type\": \"HEADER\",\n                            \"format\": \"IMAGE\",\n                            \"example\": {\n                                \"header_handle\": [\n                                    \"<MEDIA_HANDLE>\"\n                                ]\n                            }\n                        },\n                        {\n                            \"type\": \"BODY\",\n                            \"text\": \"Rare lemons for unique cocktails. Use code {{1}} to get {{2}} off all produce.\",\n                            \"example\": {\n                                \"body_text\": [\n                                    [\n                                        \"15OFF\",\n                                        \"15%\"\n                                    ]\n                                ]\n                            }\n                        },\n                        {\n                            \"type\": \"BUTTONS\",\n                            \"buttons\": [\n                                {\n                                    \"type\": \"QUICK_REPLY\",\n                                    \"text\": \"Send more like this\"\n                                },\n                                {\n                                    \"type\": \"URL\",\n                                    \"text\": \"Buy now\",\n                                    \"url\": \"<BASE_URL>/shop?promo={{1}}\",\n                                    \"example\": [\n                                        \"example variable\"\n                                    ]\n                                }\n                            ]\n                        }\n                    ]\n                },\n                {\n                    \"components\": [\n                        {\n                            \"type\": \"HEADER\",\n                            \"format\": \"IMAGE\",\n                            \"example\": {\n                                \"header_handle\": [\n                                    \"<MEDIA_HANDLE>\"\n                                ]\n                            }\n                        },\n                        {\n                            \"type\": \"BODY\",\n                            \"text\": \"Exotic fruit for unique cocktails! Use code {{1}} to get {{2}} off all exotic produce.\",\n                            \"example\": {\n                                \"body_text\": [\n                                    [\n                                        \"20OFFEXOTIC\",\n                                        \"20%\"\n                                    ]\n                                ]\n                            }\n                        },\n                        {\n                            \"type\": \"BUTTONS\",\n                            \"buttons\": [\n                                {\n                                    \"type\": \"QUICK_REPLY\",\n                                    \"text\": \"Send more like this\"\n                                },\n                                {\n                                    \"type\": \"URL\",\n                                    \"text\": \"Buy now\",\n                                    \"url\": \"<BASE_URL>/shop?promo={{1}}\",\n                                    \"example\": [\n                                        \"example variable\"\n                                    ]\n                                }\n                            ]\n                        }\n                    ]\n                }\n            ]\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/wa/v1/templates/create-template",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"wa",
+								"v1",
+								"templates",
+								"create-template"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 31 May 2024 09:19:21 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "AWSALBTG=hamJFKU+kX7gmUS0sJzkk16wRK+eV9tLiAjVPwPTFZbUPwvsdz5zvDoPyPwyKbUDfr/nyWEZfU/BjG0StFJWyMYSgzLsE6/nDXNKMUSxbwpaYJ3MSmqYgW/pwlSUnc/Hl954itMQ1Io29TFMBAvrV89eteOnMs6AJr8FJRJz6Y/FiuF/mQ8=; Expires=Fri, 07 Jun 2024 09:19:15 GMT; Path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "AWSALBTGCORS=hamJFKU+kX7gmUS0sJzkk16wRK+eV9tLiAjVPwPTFZbUPwvsdz5zvDoPyPwyKbUDfr/nyWEZfU/BjG0StFJWyMYSgzLsE6/nDXNKMUSxbwpaYJ3MSmqYgW/pwlSUnc/Hl954itMQ1Io29TFMBAvrV89eteOnMs6AJr8FJRJz6Y/FiuF/mQ8=; Expires=Fri, 07 Jun 2024 09:19:15 GMT; Path=/; SameSite=None; Secure"
+						},
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0 (Ubuntu)"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"629-pVFxAudWCh6DJBj64grpfhLBFoI\""
+						},
+						{
+							"key": "set-cookie",
+							"value": "connect.sid=s%3AAI4rhxSgsjkwqfup60A2_C3P3bkBEU7m.MN2VR8n6XhUYOZ589PvODHVN8ZaUSt4aogiUZo59Hww; Path=/; HttpOnly"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"Success\",\n    \"code\": 200,\n    \"res_json\": {\n        \"category\": \"MARKETING\",\n        \"components\": [\n            {\n                \"example\": {\n                    \"body_text\": [\n                        [\n                            \"15OFF\",\n                            \"15%\"\n                        ]\n                    ]\n                },\n                \"text\": \"Summer is here, and we have the freshest produce around! Use code {{1}} to get {{2}} off your next order.\",\n                \"type\": \"BODY\"\n            },\n            {\n                \"cards\": [\n                    {\n                        \"components\": [\n                            {\n                                \"example\": {\n                                    \"header_handle\": [\n                                        \"<MEDIA_HANDLE>\"\n                                    ]\n                                },\n                                \"format\": \"IMAGE\",\n                                \"type\": \"HEADER\"\n                            },\n                            {\n                                \"example\": {\n                                    \"body_text\": [\n                                        [\n                                            \"15OFF\",\n                                            \"15%\"\n                                        ]\n                                    ]\n                                },\n                                \"text\": \"Rare lemons for unique cocktails. Use code {{1}} to get {{2}} off all produce.\",\n                                \"type\": \"BODY\"\n                            },\n                            {\n                                \"buttons\": [\n                                    {\n                                        \"text\": \"Send more like this\",\n                                        \"type\": \"QUICK_REPLY\"\n                                    },\n                                    {\n                                        \"example\": [\n                                            \"example variable\"\n                                        ],\n                                        \"text\": \"Buy now\",\n                                        \"type\": \"URL\",\n                                        \"url\": \"<BASE_URL>/shop?promo={{1}}\"\n                                    }\n                                ],\n                                \"type\": \"BUTTONS\"\n                            }\n                        ]\n                    },\n                    {\n                        \"components\": [\n                            {\n                                \"example\": {\n                                    \"header_handle\": [\n                                        \"<MEDIA_HANDLE>\"\n                                    ]\n                                },\n                                \"format\": \"IMAGE\",\n                                \"type\": \"HEADER\"\n                            },\n                            {\n                                \"example\": {\n                                    \"body_text\": [\n                                        [\n                                            \"20OFFEXOTIC\",\n                                            \"20%\"\n                                        ]\n                                    ]\n                                },\n                                \"text\": \"Exotic fruit for unique cocktails! Use code {{1}} to get {{2}} off all exotic produce.\",\n                                \"type\": \"BODY\"\n                            },\n                            {\n                                \"buttons\": [\n                                    {\n                                        \"text\": \"Send more like this\",\n                                        \"type\": \"QUICK_REPLY\"\n                                    },\n                                    {\n                                        \"example\": [\n                                            \"example variable\"\n                                        ],\n                                        \"text\": \"Buy now\",\n                                        \"type\": \"URL\",\n                                        \"url\": \"<BASE_URL>/shop?promo={{1}}\"\n                                    }\n                                ],\n                                \"type\": \"BUTTONS\"\n                            }\n                        ]\n                    }\n                ],\n                \"type\": \"CAROUSEL\"\n            }\n        ],\n        \"language\": \"en_US\",\n        \"name\": \"carousel_type_template\",\n        \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n        \"rejected_reason\": null,\n        \"status\": \"submitted\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Create Limited-Time Offer Templates",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{APIKEY}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"limited_time_offer\",\n    \"language\": \"en_US\",\n    \"category\": \"MARKETING\",\n    \"components\": [\n        {\n            \"type\": \"HEADER\",\n            \"format\": \"IMAGE\",\n            \"example\": {\n                \"header_handle\": [\n                    \"<MEDIA_HANDLE>\"\n                ]\n            }\n        },\n        {\n            \"type\": \"limited_time_offer\",\n            \"limited_time_offer\": {\n                \"text\": \"Expiring offer!\",\n                \"has_expiration\": true\n            }\n        },\n        {\n            \"type\": \"BODY\",\n            \"text\": \"Good news, {{1}}! Use code {{2}} to get 25% off all Caribbean Destination packages!\",\n            \"example\": {\n                \"body_text\": [\n                    [\n                        \"Pablo\",\n                        \"CARIBE25\"\n                    ]\n                ]\n            }\n        },\n        {\n            \"type\": \"BUTTONS\",\n            \"buttons\": [\n                {\n                    \"type\": \"COPY_CODE\",\n                    \"example\": \"CARIBE25\"\n                },\n                {\n                    \"type\": \"URL\",\n                    \"text\": \"Book now!\",\n                    \"url\": \"<BASE_URL>/offers?code={{1}}\",\n                    \"example\": [\n                        \"url variable\"\n                    ]\n                }\n            ]\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/wa/v1/templates/create-template",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"wa",
+						"v1",
+						"templates",
+						"create-template"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{APIKEY}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"limited_time_offer\",\n    \"language\": \"en_US\",\n    \"category\": \"MARKETING\",\n    \"components\": [\n        {\n            \"type\": \"HEADER\",\n            \"format\": \"IMAGE\",\n            \"example\": {\n                \"header_handle\": [\n                    \"<MEDIA_HANDLE>\"\n                ]\n            }\n        },\n        {\n            \"type\": \"limited_time_offer\",\n            \"limited_time_offer\": {\n                \"text\": \"Expiring offer!\",\n                \"has_expiration\": true\n            }\n        },\n        {\n            \"type\": \"BODY\",\n            \"text\": \"Good news, {{1}}! Use code {{2}} to get 25% off all Caribbean Destination packages!\",\n            \"example\": {\n                \"body_text\": [\n                    [\n                        \"Pablo\",\n                        \"CARIBE25\"\n                    ]\n                ]\n            }\n        },\n        {\n            \"type\": \"BUTTONS\",\n            \"buttons\": [\n                {\n                    \"type\": \"COPY_CODE\",\n                    \"example\": \"CARIBE25\"\n                },\n                {\n                    \"type\": \"URL\",\n                    \"text\": \"Book now!\",\n                    \"url\": \"<BASE_URL>/offers?code={{1}}\",\n                    \"example\": [\n                        \"url variable\"\n                    ]\n                }\n            ]\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/wa/v1/templates/create-template",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"wa",
+								"v1",
+								"templates",
+								"create-template"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 31 May 2024 09:21:44 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "AWSALBTG=O1KU+F5sYCqfdbPhgrj38CPpJlG3j+J8fMCPSyEjdkV2G61v2v9ZABuHRJGkxwEE7jRxnTgLZzv/IBVHwCEe4BvzQw6Vwh3kWkcfPpBztDlXL93caqme4kCuIcC0RrTKV/TiviAFuL8Qy9uCFAVl8QW+ds4Gq1Jq0ZpL/02JsbjvDghZg8Q=; Expires=Fri, 07 Jun 2024 09:21:38 GMT; Path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "AWSALBTGCORS=O1KU+F5sYCqfdbPhgrj38CPpJlG3j+J8fMCPSyEjdkV2G61v2v9ZABuHRJGkxwEE7jRxnTgLZzv/IBVHwCEe4BvzQw6Vwh3kWkcfPpBztDlXL93caqme4kCuIcC0RrTKV/TiviAFuL8Qy9uCFAVl8QW+ds4Gq1Jq0ZpL/02JsbjvDghZg8Q=; Expires=Fri, 07 Jun 2024 09:21:38 GMT; Path=/; SameSite=None; Secure"
+						},
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0 (Ubuntu)"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"371-BW9axFUjBa+coWz1/YX1InOsuug\""
+						},
+						{
+							"key": "set-cookie",
+							"value": "connect.sid=s%3AJUPcdM7X6odbT_qW-XqhOrCYTL6m2YyZ.gWSG0hX9lVnzgrglCbJYNqTStJZ6tzwSNWpeM%2B07%2BQY; Path=/; HttpOnly"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"Success\",\n    \"code\": 200,\n    \"res_json\": {\n        \"category\": \"MARKETING\",\n        \"components\": [\n            {\n                \"example\": {\n                    \"header_handle\": [\n                        \"<MEDIA_HANDLE>\"\n                    ]\n                },\n                \"format\": \"IMAGE\",\n                \"type\": \"HEADER\"\n            },\n            {\n                \"limited_time_offer\": {\n                    \"has_expiration\": true,\n                    \"text\": \"Expiring offer!\"\n                },\n                \"type\": \"LIMITED_TIME_OFFER\"\n            },\n            {\n                \"example\": {\n                    \"body_text\": [\n                        [\n                            \"Pablo\",\n                            \"CARIBE25\"\n                        ]\n                    ]\n                },\n                \"text\": \"Good news, {{1}}! Use code {{2}} to get 25% off all Caribbean Destination packages!\",\n                \"type\": \"BODY\"\n            },\n            {\n                \"buttons\": [\n                    {\n                        \"example\": \"CARIBE25\",\n                        \"type\": \"COPY_CODE\"\n                    },\n                    {\n                        \"example\": [\n                            \"url variable\"\n                        ],\n                        \"text\": \"Book now!\",\n                        \"type\": \"URL\",\n                        \"url\": \"<BASE_URL>/offers?code={{1}}\"\n                    }\n                ],\n                \"type\": \"BUTTONS\"\n            }\n        ],\n        \"language\": \"en_US\",\n        \"name\": \"limited_time_offer\",\n        \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n        \"rejected_reason\": null,\n        \"status\": \"submitted\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Create Multi-Product Message Templates",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{APIKEY}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"multi_product_template\",\n    \"language\": \"en_US\",\n    \"category\": \"MARKETING\",\n    \"components\": [\n        {\n            \"type\": \"HEADER\",\n            \"format\": \"TEXT\",\n            \"text\": \"Forget something, {{1}}?\",\n            \"example\": {\n                \"header_text\": [\n                    \"Pablo\"\n                ]\n            }\n        },\n        {\n            \"type\": \"BODY\",\n            \"text\": \"Looks like you left these items in your cart, still interested? Use code {{1}} to get 10% off!\",\n            \"example\": {\n                \"body_text\": [\n                    [\n                        \"10OFF\"\n                    ]\n                ]\n            }\n        },\n        {\n            \"type\": \"BUTTONS\",\n            \"buttons\": [\n                {\n                    \"type\": \"MPM\",\n                    \"text\": \"View items\"\n                }\n            ]\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/wa/v1/templates/create-template",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"wa",
+						"v1",
+						"templates",
+						"create-template"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{APIKEY}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"multi_product_template\",\n    \"language\": \"en_US\",\n    \"category\": \"MARKETING\",\n    \"components\": [\n        {\n            \"type\": \"HEADER\",\n            \"format\": \"TEXT\",\n            \"text\": \"Forget something, {{1}}?\",\n            \"example\": {\n                \"header_text\": [\n                    \"Pablo\"\n                ]\n            }\n        },\n        {\n            \"type\": \"BODY\",\n            \"text\": \"Looks like you left these items in your cart, still interested? Use code {{1}} to get 10% off!\",\n            \"example\": {\n                \"body_text\": [\n                    [\n                        \"10OFF\"\n                    ]\n                ]\n            }\n        },\n        {\n            \"type\": \"BUTTONS\",\n            \"buttons\": [\n                {\n                    \"type\": \"MPM\",\n                    \"text\": \"View items\"\n                }\n            ]\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/wa/v1/templates/create-template",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"wa",
+								"v1",
+								"templates",
+								"create-template"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 31 May 2024 08:59:49 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "AWSALBTG=xJscQICtSoiW4C1FuvRT9s4TW8GaSIDHlbcvNc7EZsPNSCGPFSQIOZZscm32VsgUIGIUP/Z74MnGQ/LYmsHgeKR0ypS8oi6ObTOlyNc3m/WAbN09TGwyFfiGxIed50es+HesMv7jx4C82MxtXGmLIEsFp9aJcOT9BJ6sGqQ1ErSnY616upo=; Expires=Fri, 07 Jun 2024 08:59:46 GMT; Path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "AWSALBTGCORS=xJscQICtSoiW4C1FuvRT9s4TW8GaSIDHlbcvNc7EZsPNSCGPFSQIOZZscm32VsgUIGIUP/Z74MnGQ/LYmsHgeKR0ypS8oi6ObTOlyNc3m/WAbN09TGwyFfiGxIed50es+HesMv7jx4C82MxtXGmLIEsFp9aJcOT9BJ6sGqQ1ErSnY616upo=; Expires=Fri, 07 Jun 2024 08:59:46 GMT; Path=/; SameSite=None; Secure"
+						},
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0 (Ubuntu)"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"239-4KZXJc7yLQ09NprgtGaPY7cXV3c\""
+						},
+						{
+							"key": "set-cookie",
+							"value": "connect.sid=s%3AA_WzDD7euXleOn9gstvnR0jSaZ3MzkQW.L6%2FNogseyi2BRWo0oUUJhwKt9xRQw4HeKq8VEBYxggo; Path=/; HttpOnly"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"Success\",\n    \"code\": 200,\n    \"res_json\": {\n        \"category\": \"MARKETING\",\n        \"components\": [\n            {\n                \"example\": {\n                    \"header_text\": [\n                        \"Pablo\"\n                    ]\n                },\n                \"format\": \"TEXT\",\n                \"text\": \"Forget something, {{1}}?\",\n                \"type\": \"HEADER\"\n            },\n            {\n                \"example\": {\n                    \"body_text\": [\n                        [\n                            \"10OFF\"\n                        ]\n                    ]\n                },\n                \"text\": \"Looks like you left these items in your cart, still interested? Use code {{1}} to get 10% off!\",\n                \"type\": \"BODY\"\n            },\n            {\n                \"buttons\": [\n                    {\n                        \"text\": \"View items\",\n                        \"type\": \"MPM\"\n                    }\n                ],\n                \"type\": \"BUTTONS\"\n            }\n        ],\n        \"language\": \"en_US\",\n        \"name\": \"multi_product_template\",\n        \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n        \"rejected_reason\": null,\n        \"status\": \"submitted\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Create Coupon Type Template",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{APIKEY}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"coupon_type_template\",\n    \"language\": \"en_US\",\n    \"category\": \"MARKETING\",\n    \"components\": [\n        {\n            \"type\": \"HEADER\",\n            \"format\": \"TEXT\",\n            \"text\": \"Our Fall Sale is on!\"\n        },\n        {\n            \"type\": \"BODY\",\n            \"text\": \"Shop now through November and use code {{1}} to get {{2}} off of all merchandise!\",\n            \"example\": {\n                \"body_text\": [\n                    [\n                        \"25OFF\",\n                        \"25%\"\n                    ]\n                ]\n            }\n        },\n        {\n            \"type\": \"BUTTONS\",\n            \"buttons\": [\n                {\n                    \"type\": \"QUICK_REPLY\",\n                    \"text\": \"Unsubscribe\"\n                },\n                {\n                    \"type\": \"COPY_CODE\",\n                    \"example\": \"250FF\"\n                }\n            ]\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/wa/v1/templates/create-template",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"wa",
+						"v1",
+						"templates",
+						"create-template"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{APIKEY}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"coupon_type_template\",\n    \"language\": \"en_US\",\n    \"category\": \"MARKETING\",\n    \"components\": [\n        {\n            \"type\": \"HEADER\",\n            \"format\": \"TEXT\",\n            \"text\": \"Our Fall Sale is on!\"\n        },\n        {\n            \"type\": \"BODY\",\n            \"text\": \"Shop now through November and use code {{1}} to get {{2}} off of all merchandise!\",\n            \"example\": {\n                \"body_text\": [\n                    [\n                        \"25OFF\",\n                        \"25%\"\n                    ]\n                ]\n            }\n        },\n        {\n            \"type\": \"BUTTONS\",\n            \"buttons\": [\n                {\n                    \"type\": \"QUICK_REPLY\",\n                    \"text\": \"Unsubscribe\"\n                },\n                {\n                    \"type\": \"COPY_CODE\",\n                    \"example\": \"250FF\"\n                }\n            ]\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/wa/v1/templates/create-template",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"wa",
+								"v1",
+								"templates",
+								"create-template"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 31 May 2024 08:39:44 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "AWSALBTG=PVJWp2ysJW9+hfI9zAVtpqREaRmbnvkIMc94008cEW0JH9lydS+WiFYhtgQMxjWV+fl3Q+WIBhP8PPISe4V5VnCYDXyBA3wVgxT2BNQzt+ZunZTiRUkJs1B+8QPIxX50x8dTC8mlIkmuZB//G6m6U8xS0zRLqPL5BcZLU5iFKEi1+8kjH60=; Expires=Fri, 07 Jun 2024 08:39:40 GMT; Path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "AWSALBTGCORS=PVJWp2ysJW9+hfI9zAVtpqREaRmbnvkIMc94008cEW0JH9lydS+WiFYhtgQMxjWV+fl3Q+WIBhP8PPISe4V5VnCYDXyBA3wVgxT2BNQzt+ZunZTiRUkJs1B+8QPIxX50x8dTC8mlIkmuZB//G6m6U8xS0zRLqPL5BcZLU5iFKEi1+8kjH60=; Expires=Fri, 07 Jun 2024 08:39:40 GMT; Path=/; SameSite=None; Secure"
+						},
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0 (Ubuntu)"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"238-cNF41mRZIhu5m4j8njyiVNlFE4o\""
+						},
+						{
+							"key": "set-cookie",
+							"value": "connect.sid=s%3A3fiHTTM-izsjiXE0YLIH83AMTyta6b5n.Rmy8bjPwfkS2Nrfi%2FV1Nq6%2B0hM4B31fnUm09vEjSVPQ; Path=/; HttpOnly"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"Success\",\n    \"code\": 200,\n    \"res_json\": {\n        \"category\": \"MARKETING\",\n        \"components\": [\n            {\n                \"format\": \"TEXT\",\n                \"text\": \"Our Fall Sale is on!\",\n                \"type\": \"HEADER\"\n            },\n            {\n                \"example\": {\n                    \"body_text\": [\n                        [\n                            \"25OFF\",\n                            \"25%\"\n                        ]\n                    ]\n                },\n                \"text\": \"Shop now through November and use code {{1}} to get {{2}} off of all merchandise!\",\n                \"type\": \"BODY\"\n            },\n            {\n                \"buttons\": [\n                    {\n                        \"text\": \"Unsubscribe\",\n                        \"type\": \"QUICK_REPLY\"\n                    },\n                    {\n                        \"example\": \"250FF\",\n                        \"type\": \"COPY_CODE\"\n                    }\n                ],\n                \"type\": \"BUTTONS\"\n            }\n        ],\n        \"language\": \"en_US\",\n        \"name\": \"coupon_type_template\",\n        \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n        \"rejected_reason\": null,\n        \"status\": \"submitted\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Create template w/ text header, text body, text footer, and 2 quick reply buttons",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{APIKEY}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"seasonal_promotion\",\n    \"language\": \"en\",\n    \"category\": \"MARKETING\",\n    \"components\": [\n        {\n            \"type\": \"HEADER\",\n            \"format\": \"TEXT\",\n            \"text\": \"Our {{1}} is on!\",\n            \"example\": {\n                \"header_text\": [\n                    \"Summer Sale\"\n                ]\n            }\n        },\n        {\n            \"type\": \"BODY\",\n            \"text\": \"Shop now through {{1}} and use code {{2}} to get {{3}} off of all merchandise.\",\n            \"example\": {\n                \"body_text\": [\n                    [\n                        \"the end of August\",\"25OFF\",\"25%\"\n                    ]\n                ]\n            }\n        },\n        {\n            \"type\": \"FOOTER\",\n            \"text\": \"Use the buttons below to manage your marketing subscriptions\"\n        },\n        {\n            \"type\":\"BUTTONS\",\n            \"buttons\": [\n                {\n                    \"type\": \"QUICK_REPLY\",\n                    \"text\": \"Unsubcribe from Promos\"\n                },\n                {\n                    \"type\":\"QUICK_REPLY\",\n                    \"text\": \"Unsubscribe from All\"\n                }\n            ]\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/wa/v1/templates/create-template",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"wa",
+						"v1",
+						"templates",
+						"create-template"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{APIKEY}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Cookie",
+								"value": "connect.sid=s%3AfTx6XEfiILafDNo7Vth0gVZWlYTG0imY.Do0JCuyAR6j8npmnRMyM%2BPAYWr%2FgAV7hn80f4xMoCms"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"seasonal_promotion\",\n    \"language\": \"en\",\n    \"category\": \"MARKETING\",\n    \"components\": [\n        {\n            \"type\": \"HEADER\",\n            \"format\": \"TEXT\",\n            \"text\": \"Our {{1}} is on!\",\n            \"example\": {\n                \"header_text\": [\n                    \"Summer Sale\"\n                ]\n            }\n        },\n        {\n            \"type\": \"BODY\",\n            \"text\": \"Shop now through {{1}} and use code {{2}} to get {{3}} off of all merchandise.\",\n            \"example\": {\n                \"body_text\": [\n                    [\n                        \"the end of August\",\n                        \"25OFF\",\n                        \"25%\"\n                    ]\n                ]\n            }\n        },\n        {\n            \"type\": \"FOOTER\",\n            \"text\": \"Use the buttons below to manage your marketing subscriptions\"\n        },\n        {\n            \"type\": \"BUTTONS\",\n            \"buttons\": [\n                {\n                    \"type\": \"QUICK_REPLY\",\n                    \"text\": \"Unsubcribe from Promos\"\n                },\n                {\n                    \"type\": \"QUICK_REPLY\",\n                    \"text\": \"Unsubscribe from All\"\n                }\n            ]\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/wa/v1/templates/create-template",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"wa",
+								"v1",
+								"templates",
+								"create-template"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 31 May 2024 09:03:52 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "AWSALBTG=fWOznc4G7gauM1iOOkazjcidUt0v6J/1c6K9DZRHeY3EP89wBx1d2WGWCx1S8kO8Drg3ISVBjoNrtZ0mkVTZh7FvoC8HhvYYeUOejWONjVf7PVKlzwl8zxAXnjOhCygnRshCKTm+GTXpW2PnumNsLdxRafkL3jaYxViOo9IMtir7N0gYwW8=; Expires=Fri, 07 Jun 2024 09:03:49 GMT; Path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "AWSALBTGCORS=fWOznc4G7gauM1iOOkazjcidUt0v6J/1c6K9DZRHeY3EP89wBx1d2WGWCx1S8kO8Drg3ISVBjoNrtZ0mkVTZh7FvoC8HhvYYeUOejWONjVf7PVKlzwl8zxAXnjOhCygnRshCKTm+GTXpW2PnumNsLdxRafkL3jaYxViOo9IMtir7N0gYwW8=; Expires=Fri, 07 Jun 2024 09:03:49 GMT; Path=/; SameSite=None; Secure"
+						},
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0 (Ubuntu)"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2db-/wHPuqi7abWkEnyuYZSIhHr9FGs\""
+						},
+						{
+							"key": "set-cookie",
+							"value": "connect.sid=s%3ACUuYoFmIbN77THpT9GbOxgujTvJpb2ts.BAg2Lmyo%2BHwnj0rQD0nS4xO6niWDgBR8OrDtCcNdsts; Path=/; HttpOnly"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"Success\",\n    \"code\": 200,\n    \"res_json\": {\n        \"category\": \"MARKETING\",\n        \"components\": [\n            {\n                \"example\": {\n                    \"header_text\": [\n                        \"Summer Sale\"\n                    ]\n                },\n                \"format\": \"TEXT\",\n                \"text\": \"Our {{1}} is on!\",\n                \"type\": \"HEADER\"\n            },\n            {\n                \"example\": {\n                    \"body_text\": [\n                        [\n                            \"the end of August\",\n                            \"25OFF\",\n                            \"25%\"\n                        ]\n                    ]\n                },\n                \"text\": \"Shop now through {{1}} and use code {{2}} to get {{3}} off of all merchandise.\",\n                \"type\": \"BODY\"\n            },\n            {\n                \"text\": \"Use the buttons below to manage your marketing subscriptions\",\n                \"type\": \"FOOTER\"\n            },\n            {\n                \"buttons\": [\n                    {\n                        \"text\": \"Unsubcribe from Promos\",\n                        \"type\": \"QUICK_REPLY\"\n                    },\n                    {\n                        \"text\": \"Unsubscribe from All\",\n                        \"type\": \"QUICK_REPLY\"\n                    }\n                ],\n                \"type\": \"BUTTONS\"\n            }\n        ],\n        \"language\": \"en\",\n        \"name\": \"seasonal_promotion\",\n        \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n        \"rejected_reason\": null,\n        \"status\": \"submitted\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Create template w/ image header, text body, text footer, and 2 call-to-action buttons",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{APIKEY}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"limited_time_offer_tuscan_getaway_2024\",\n    \"language\": \"en_US\",\n    \"category\": \"MARKETING\",\n    \"components\": [\n        {\n            \"type\": \"HEADER\",\n            \"format\": \"IMAGE\", // IMAGE < VIDEO DOCUMENT\n            \"example\": {\n                \"header_handle\": [\n                    \"<MEDIA_HANDLE>\"\n                ]\n            }\n        },\n        {\n            \"type\": \"BODY\",\n            \"text\": \"Hi {{1}}! For a limited time only you can get our {{2}} for as low as {{3}}. Tap the Offer Details button for more information.\",\n            \"example\": {\n                \"body_text\": [\n                    [\n                        \"Mark\",\n                        \"Tuscan Getaway package\",\n                        \"800\"\n                    ]\n                ]\n            }\n        },\n        {\n            \"type\": \"FOOTER\",\n            \"text\": \"Offer valid until May 31, 2023\"\n        },\n        {\n            \"type\": \"BUTTONS\",\n            \"buttons\": [\n                {\n                    \"type\": \"PHONE_NUMBER\",\n                    \"text\": \"Call\",\n                    \"phone_number\": \"918434987643\"\n                },\n                {\n                    \"type\": \"URL\",\n                    \"text\": \"Shop Now\",\n                    \"url\": \"<BASE_URL>/shop?promo={{1}}\",\n                    \"example\": [\n                        \"summer2023\"\n                    ]\n                }\n            ]\n        }\n    ],\n    \"file_type\": \"IMAGE\",\n    \"file_url\": \"<Media FILE URL>\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/wa/v1/templates/create-template",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"wa",
+						"v1",
+						"templates",
+						"create-template"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{APIKEY}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"limited_time_offer_tuscan_getaway_2024\",\n    \"language\": \"en_US\",\n    \"category\": \"MARKETING\",\n    \"components\": [\n        {\n            \"type\": \"HEADER\",\n            \"format\": \"IMAGE\",\n            \"example\": {\n                \"header_handle\": [\n                    \"<MEDIA_HANDLE>\"\n                ]\n            }\n        },\n        {\n            \"type\": \"BODY\",\n            \"text\": \"Hi {{1}}! For a limited time only you can get our {{2}} for as low as {{3}}. Tap the Offer Details button for more information.\",\n            \"example\": {\n                \"body_text\": [\n                    [\n                        \"Mark\",\n                        \"Tuscan Getaway package\",\n                        \"800\"\n                    ]\n                ]\n            }\n        },\n        {\n            \"type\": \"FOOTER\",\n            \"text\": \"Offer valid until May 31, 2023\"\n        },\n        {\n            \"type\": \"BUTTONS\",\n            \"buttons\": [\n                {\n                    \"type\": \"PHONE_NUMBER\",\n                    \"text\": \"Call\",\n                    \"phone_number\": \"918434987643\"\n                },\n                {\n                    \"type\": \"URL\",\n                    \"text\": \"Shop Now\",\n                    \"url\": \"<BASE_URL>/shop?promo={{1}}\",\n                    \"example\": [\n                        \"summer2023\"\n                    ]\n                }\n            ]\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/wa/v1/templates/create-template",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"wa",
+								"v1",
+								"templates",
+								"create-template"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 31 May 2024 09:18:04 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "AWSALBTG=bXFwAUwArzXA7lckHbuvXetI3zScBlwUdUE+kpyPVO3x65Bz/y1sOiUsrts5B58dTVkJaHAWso8xXCKM/l1uvjvLTClH4jeo5W4yBjDcKUMtsvlRmB6lOaIn8DiEatN1XzBnsirDiDrLoFj+OZrWwE8Zwa2GVKFuQ0Kj3/LfqVn8JTnOlYY=; Expires=Fri, 07 Jun 2024 09:17:57 GMT; Path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "AWSALBTGCORS=bXFwAUwArzXA7lckHbuvXetI3zScBlwUdUE+kpyPVO3x65Bz/y1sOiUsrts5B58dTVkJaHAWso8xXCKM/l1uvjvLTClH4jeo5W4yBjDcKUMtsvlRmB6lOaIn8DiEatN1XzBnsirDiDrLoFj+OZrWwE8Zwa2GVKFuQ0Kj3/LfqVn8JTnOlYY=; Expires=Fri, 07 Jun 2024 09:17:57 GMT; Path=/; SameSite=None; Secure"
+						},
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0 (Ubuntu)"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"387-9UaGQfBAT9srhCLZWtJ1HCfxZcs\""
+						},
+						{
+							"key": "set-cookie",
+							"value": "connect.sid=s%3AnhM739GtlT0B8rmzse5qVmTcFgoi7KvH.ExDx%2F9ZfQOAJA6i4KdH6XdaPwaqL7gvWQKsAUbDHQfI; Path=/; HttpOnly"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"Success\",\n    \"code\": 200,\n    \"res_json\": {\n        \"category\": \"MARKETING\",\n        \"components\": [\n            {\n                \"example\": {\n                    \"header_handle\": [\n                        \"<MEDIA_HANDLE>\"\n                    ]\n                },\n                \"format\": \"IMAGE\",\n                \"type\": \"HEADER\"\n            },\n            {\n                \"example\": {\n                    \"body_text\": [\n                        [\n                            \"Mark\",\n                            \"Tuscan Getaway package\",\n                            \"800\"\n                        ]\n                    ]\n                },\n                \"text\": \"Hi {{1}}! For a limited time only you can get our {{2}} for as low as {{3}}. Tap the Offer Details button for more information.\",\n                \"type\": \"BODY\"\n            },\n            {\n                \"text\": \"Offer valid until May 31, 2023\",\n                \"type\": \"FOOTER\"\n            },\n            {\n                \"buttons\": [\n                    {\n                        \"phone_number\": \"918434987643\",\n                        \"text\": \"Call\",\n                        \"type\": \"PHONE_NUMBER\"\n                    },\n                    {\n                        \"example\": [\n                            \"summer2023\"\n                        ],\n                        \"text\": \"Shop Now\",\n                        \"type\": \"URL\",\n                        \"url\": \"<BASE_URL>/shop?promo={{1}}\"\n                    }\n                ],\n                \"type\": \"BUTTONS\"\n            }\n        ],\n        \"language\": \"en_US\",\n        \"name\": \"limited_time_offer_tuscan_getaway_2024\",\n        \"namespace\": \"f944608f_f935_463d_b7f2_689dfc575880\",\n        \"rejected_reason\": null,\n        \"status\": \"submitted\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Create Media Handler for template",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{APIKEY}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/wa/v1/templates/resumable-upload-template",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"wa",
+						"v1",
+						"templates",
+						"resumable-upload-template"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Media Handler for template",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{APIKEY}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/anilkumar/Downloads/WhatsApp Image 2025-04-16 at 10.24.14.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/wa/v1/templates/resumable-upload-template",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"wa",
+								"v1",
+								"templates",
+								"resumable-upload-template"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 25 Apr 2025 11:33:26 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "490"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1ea-5wTYMSwfFgYG2eLZcdpAGiIB5vA\""
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "connect.sid=s%3ANjDEjPJHwDs6PsCoEo_3bpeYWKyi9bEj.HNJV55GHSbiTFFoD5csK%2BaLzKrG13v0e%2BrYpb0g8peE; Path=/; HttpOnly"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"File uploaded successfully!\",\n    \"code\": 200,\n    \"res_json\": {\n        \"file_handler\": \"Media Handler\",\n        \"file_url\": \"S3 URL\"\n    }\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "YOUR_BASE_URL",
+			"type": "string"
+		},
+		{
+			"key": "APIKEY",
+			"value": "YOUR_API_KEY",
+			"type": "string"
+		}
+	]
+}

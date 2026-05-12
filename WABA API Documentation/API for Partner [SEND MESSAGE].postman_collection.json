@@ -1,0 +1,886 @@
+{
+	"info": {
+		"_postman_id": "dcfa4ee5-ba37-4391-9019-9e2746df0256",
+		"name": "API for Partner [SEND MESSAGE]",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26126561",
+		"_collection_link": "https://operation-team-3762.postman.co/workspace/Async-and-Temlate~4f4eb1dd-d437-4630-a838-ebde80d3eb68/collection/26126561-dcfa4ee5-ba37-4391-9019-9e2746df0256?action=share&source=collection_link&creator=26126561"
+	},
+	"item": [
+		{
+			"name": "Authentication temlate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{APIKeys}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"messaging_product\": \"whatsapp\",\n    \"recipient_type\": \"individual\",\n    \"to\": \"918591750000\",\n    \"type\": \"template\",\n    \"template\": {\n        \"name\": \"otp_for_login\",\n        \"language\": {\n            \"code\": \"en\"\n        },\n        \"components\": [\n            {\n                \"type\": \"body\",\n                \"parameters\": [\n                    {\n                        \"type\": \"text\",\n                        \"text\": \"123456\"\n                    }\n                ]\n            },\n            {\n                \"type\": \"button\",\n                \"sub_type\": \"url\",\n                \"index\": \"0\",\n                \"parameters\": [\n                    {\n                        \"type\": \"text\",\n                        \"text\": \"123456\"\n                    }\n                ]\n            }\n        ]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}",
+					"host": [
+						"{{BaseURL}}"
+					]
+				},
+				"description": "<img src=\"https://content.pstmn.io/cf19a4e8-f70e-45fd-8d8f-6d799dd580d9/bG9nby1ibHVlLXdoaXRlLnBuZw==\">"
+			},
+			"response": []
+		},
+		{
+			"name": "Carousal Send API",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{APIKeys}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"messaging_product\": \"whatsapp\",\n    \"recipient_type\": \"individual\",\n    \"to\": \"919355523737\",\n    \"type\": \"template\",\n    \"template\": {\n        \"name\": \"carousel_template123\",\n        \"language\": {\n            \"code\": \"en_US\"\n        },\n        \"components\": [\n            {\n                \"type\": \"BODY\",\n                \"parameters\": [\n                    {\n                        \"type\": \"TEXT\",\n                        \"text\": \"20OFF\"\n                    },\n                    {\n                        \"type\": \"TEXT\",\n                        \"text\": \"20%\"\n                    }\n                ]\n            },\n            {\n                \"type\": \"CAROUSEL\",\n                \"cards\": [\n                    {\n                        \"card_index\": 0,\n                        \"components\": [\n                            {\n                                \"type\": \"HEADER\",\n                                \"parameters\": [\n                                    {\n                                        \"type\": \"IMAGE\",\n                                        \"image\": {\n                                            \"link\": \"\"\n                                        }\n                                    }\n                                ]\n                            },\n                            {\n                                \"type\": \"BODY\",\n                                \"parameters\": [\n                                    {\n                                        \"type\": \"TEXT\",\n                                        \"text\": \"10OFF\"\n                                    },\n                                    {\n                                        \"type\": \"TEXT\",\n                                        \"text\": \"10%\"\n                                    }\n                                ]\n                            },\n                            {\n                                \"type\": \"BUTTON\",\n                                \"sub_type\": \"QUICK_REPLY\",\n                                \"index\": \"0\",\n                                \"parameters\": [\n                                    {\n                                        \"type\": \"PAYLOAD\",\n                                        \"payload\": \"59NqSd\"\n                                    }\n                                ]\n                            },\n                            {\n                                \"type\": \"button\",\n                                \"sub_type\": \"URL\",\n                                \"index\": \"1\",\n                                \"parameters\": [\n                                    {\n                                        \"type\": \"payload\",\n                                        \"payload\": \"last_chance_2023\"\n                                    }\n                                ]\n                            }\n                        ]\n                    },\n                    {\n                        \"card_index\": 1,\n                        \"components\": [\n                            {\n                                \"type\": \"HEADER\",\n                                \"parameters\": [\n                                    {\n                                        \"type\": \"IMAGE\",\n                                        \"image\": {\n                                            \"link\": \"\"\n                                        }\n                                    }\n                                ]\n                            },\n                            {\n                                \"type\": \"BODY\",\n                                \"parameters\": [\n                                    {\n                                        \"type\": \"TEXT\",\n                                        \"text\": \"30OFF\"\n                                    },\n                                    {\n                                        \"type\": \"TEXT\",\n                                        \"text\": \"30%\"\n                                    }\n                                ]\n                            },\n                            {\n                                \"type\": \"BUTTON\",\n                                \"sub_type\": \"QUICK_REPLY\",\n                                \"index\": \"0\",\n                                \"parameters\": [\n                                    {\n                                        \"type\": \"PAYLOAD\",\n                                        \"payload\": \"7C4xhY\"\n                                    }\n                                ]\n                            },\n                            {\n                                \"type\": \"BUTTON\",\n                                \"sub_type\": \"URL\",\n                                \"index\": \"1\",\n                                \"parameters\": [\n                                    {\n                                        \"type\": \"payload\",\n                                        \"payload\": \"summer_blues_2023\"\n                                    }\n                                ]\n                            }\n                        ]\n                    },\n                    {\n                        \"card_index\": 2,\n                        \"components\": [\n                            {\n                                \"type\": \"HEADER\",\n                                \"parameters\": [\n                                    {\n                                        \"type\": \"IMAGE\",\n                                        \"image\": {\n                                            \"link\": \"\"\n                                        }\n                                    }\n                                ]\n                            },\n                            {\n                                \"type\": \"BODY\",\n                                \"parameters\": [\n                                    {\n                                        \"type\": \"TEXT\",\n                                        \"text\": \"30OFF\"\n                                    },\n                                    {\n                                        \"type\": \"TEXT\",\n                                        \"text\": \"30%\"\n                                    }\n                                ]\n                            },\n                            {\n                                \"type\": \"BUTTON\",\n                                \"sub_type\": \"QUICK_REPLY\",\n                                \"index\": \"0\",\n                                \"parameters\": [\n                                    {\n                                        \"type\": \"PAYLOAD\",\n                                        \"payload\": \"7C4xhY\"\n                                    }\n                                ]\n                            },\n                            {\n                                \"type\": \"BUTTON\",\n                                \"sub_type\": \"URL\",\n                                \"index\": \"1\",\n                                \"parameters\": [\n                                    {\n                                        \"type\": \"payload\",\n                                        \"payload\": \"summer_blues_2023\"\n                                    }\n                                ]\n                            }\n                        ]\n                    },\n                    {\n                        \"card_index\": 3,\n                        \"components\": [\n                            {\n                                \"type\": \"HEADER\",\n                                \"parameters\": [\n                                    {\n                                        \"type\": \"IMAGE\",\n                                        \"image\": {\n                                            \"link\": \"\"\n                                        }\n                                    }\n                                ]\n                            },\n                            {\n                                \"type\": \"BODY\",\n                                \"parameters\": [\n                                    {\n                                        \"type\": \"TEXT\",\n                                        \"text\": \"30OFF\"\n                                    },\n                                    {\n                                        \"type\": \"TEXT\",\n                                        \"text\": \"30%\"\n                                    }\n                                ]\n                            },\n                            {\n                                \"type\": \"BUTTON\",\n                                \"sub_type\": \"QUICK_REPLY\",\n                                \"index\": \"0\",\n                                \"parameters\": [\n                                    {\n                                        \"type\": \"PAYLOAD\",\n                                        \"payload\": \"7C4xhY\"\n                                    }\n                                ]\n                            },\n                            {\n                                \"type\": \"BUTTON\",\n                                \"sub_type\": \"URL\",\n                                \"index\": \"1\",\n                                \"parameters\": [\n                                    {\n                                        \"type\": \"payload\",\n                                        \"payload\": \"summer_blues_2023\"\n                                    }\n                                ]\n                            }\n                        ]\n                    },\n                    {\n                        \"card_index\": 4,\n                        \"components\": [\n                            {\n                                \"type\": \"HEADER\",\n                                \"parameters\": [\n                                    {\n                                        \"type\": \"IMAGE\",\n                                        \"image\": {\n                                            \"link\": \"\"\n                                        }\n                                    }\n                                ]\n                            },\n                            {\n                                \"type\": \"BODY\",\n                                \"parameters\": [\n                                    {\n                                        \"type\": \"TEXT\",\n                                        \"text\": \"30OFF\"\n                                    },\n                                    {\n                                        \"type\": \"TEXT\",\n                                        \"text\": \"30%\"\n                                    }\n                                ]\n                            },\n                            {\n                                \"type\": \"BUTTON\",\n                                \"sub_type\": \"QUICK_REPLY\",\n                                \"index\": \"0\",\n                                \"parameters\": [\n                                    {\n                                        \"type\": \"PAYLOAD\",\n                                        \"payload\": \"7C4xhY\"\n                                    }\n                                ]\n                            },\n                            {\n                                \"type\": \"BUTTON\",\n                                \"sub_type\": \"URL\",\n                                \"index\": \"1\",\n                                \"parameters\": [\n                                    {\n                                        \"type\": \"payload\",\n                                        \"payload\": \"summer_blues_2023\"\n                                    }\n                                ]\n                            }\n                        ]\n                    },\n                    {\n                        \"card_index\": 5,\n                        \"components\": [\n                            {\n                                \"type\": \"HEADER\",\n                                \"parameters\": [\n                                    {\n                                        \"type\": \"IMAGE\",\n                                        \"image\": {\n                                            \"link\": \"\"\n                                        }\n                                    }\n                                ]\n                            },\n                            {\n                                \"type\": \"BODY\",\n                                \"parameters\": [\n                                    {\n                                        \"type\": \"TEXT\",\n                                        \"text\": \"30OFF\"\n                                    },\n                                    {\n                                        \"type\": \"TEXT\",\n                                        \"text\": \"30%\"\n                                    }\n                                ]\n                            },\n                            {\n                                \"type\": \"BUTTON\",\n                                \"sub_type\": \"QUICK_REPLY\",\n                                \"index\": \"0\",\n                                \"parameters\": [\n                                    {\n                                        \"type\": \"PAYLOAD\",\n                                        \"payload\": \"7C4xhY\"\n                                    }\n                                ]\n                            },\n                            {\n                                \"type\": \"BUTTON\",\n                                \"sub_type\": \"URL\",\n                                \"index\": \"1\",\n                                \"parameters\": [\n                                    {\n                                        \"type\": \"payload\",\n                                        \"payload\": \"summer_blues_2023\"\n                                    }\n                                ]\n                            }\n                        ]\n                    },\n                    {\n                        \"card_index\": 6,\n                        \"components\": [\n                            {\n                                \"type\": \"HEADER\",\n                                \"parameters\": [\n                                    {\n                                        \"type\": \"IMAGE\",\n                                        \"image\": {\n                                            \"link\": \"\"\n                                        }\n                                    }\n                                ]\n                            },\n                            {\n                                \"type\": \"BODY\",\n                                \"parameters\": [\n                                    {\n                                        \"type\": \"TEXT\",\n                                        \"text\": \"30OFF\"\n                                    },\n                                    {\n                                        \"type\": \"TEXT\",\n                                        \"text\": \"30%\"\n                                    }\n                                ]\n                            },\n                            {\n                                \"type\": \"BUTTON\",\n                                \"sub_type\": \"QUICK_REPLY\",\n                                \"index\": \"0\",\n                                \"parameters\": [\n                                    {\n                                        \"type\": \"PAYLOAD\",\n                                        \"payload\": \"7C4xhY\"\n                                    }\n                                ]\n                            },\n                            {\n                                \"type\": \"BUTTON\",\n                                \"sub_type\": \"URL\",\n                                \"index\": \"1\",\n                                \"parameters\": [\n                                    {\n                                        \"type\": \"payload\",\n                                        \"payload\": \"summer_blues_2023\"\n                                    }\n                                ]\n                            }\n                        ]\n                    },\n                    {\n                        \"card_index\": 7,\n                        \"components\": [\n                            {\n                                \"type\": \"HEADER\",\n                                \"parameters\": [\n                                    {\n                                        \"type\": \"IMAGE\",\n                                        \"image\": {\n                                            \"link\": \"\"\n                                        }\n                                    }\n                                ]\n                            },\n                            {\n                                \"type\": \"BODY\",\n                                \"parameters\": [\n                                    {\n                                        \"type\": \"TEXT\",\n                                        \"text\": \"30OFF\"\n                                    },\n                                    {\n                                        \"type\": \"TEXT\",\n                                        \"text\": \"30%\"\n                                    }\n                                ]\n                            },\n                            {\n                                \"type\": \"BUTTON\",\n                                \"sub_type\": \"QUICK_REPLY\",\n                                \"index\": \"0\",\n                                \"parameters\": [\n                                    {\n                                        \"type\": \"PAYLOAD\",\n                                        \"payload\": \"7C4xhY\"\n                                    }\n                                ]\n                            },\n                            {\n                                \"type\": \"BUTTON\",\n                                \"sub_type\": \"URL\",\n                                \"index\": \"1\",\n                                \"parameters\": [\n                                    {\n                                        \"type\": \"payload\",\n                                        \"payload\": \"summer_blues_2023\"\n                                    }\n                                ]\n                            }\n                        ]\n                    },\n                    {\n                        \"card_index\": 8,\n                        \"components\": [\n                            {\n                                \"type\": \"HEADER\",\n                                \"parameters\": [\n                                    {\n                                        \"type\": \"IMAGE\",\n                                        \"image\": {\n                                            \"link\": \"\"\n                                        }\n                                    }\n                                ]\n                            },\n                            {\n                                \"type\": \"BODY\",\n                                \"parameters\": [\n                                    {\n                                        \"type\": \"TEXT\",\n                                        \"text\": \"30OFF\"\n                                    },\n                                    {\n                                        \"type\": \"TEXT\",\n                                        \"text\": \"30%\"\n                                    }\n                                ]\n                            },\n                            {\n                                \"type\": \"BUTTON\",\n                                \"sub_type\": \"QUICK_REPLY\",\n                                \"index\": \"0\",\n                                \"parameters\": [\n                                    {\n                                        \"type\": \"PAYLOAD\",\n                                        \"payload\": \"7C4xhY\"\n                                    }\n                                ]\n                            },\n                            {\n                                \"type\": \"BUTTON\",\n                                \"sub_type\": \"URL\",\n                                \"index\": \"1\",\n                                \"parameters\": [\n                                    {\n                                        \"type\": \"payload\",\n                                        \"payload\": \"summer_blues_2023\"\n                                    }\n                                ]\n                            }\n                        ]\n                    },\n                    {\n                        \"card_index\": 9,\n                        \"components\": [\n                            {\n                                \"type\": \"HEADER\",\n                                \"parameters\": [\n                                    {\n                                        \"type\": \"IMAGE\",\n                                        \"image\": {\n                                            \"link\": \"\"\n                                        }\n                                    }\n                                ]\n                            },\n                            {\n                                \"type\": \"BODY\",\n                                \"parameters\": [\n                                    {\n                                        \"type\": \"TEXT\",\n                                        \"text\": \"30OFF\"\n                                    },\n                                    {\n                                        \"type\": \"TEXT\",\n                                        \"text\": \"30%\"\n                                    }\n                                ]\n                            },\n                            {\n                                \"type\": \"BUTTON\",\n                                \"sub_type\": \"QUICK_REPLY\",\n                                \"index\": \"0\",\n                                \"parameters\": [\n                                    {\n                                        \"type\": \"PAYLOAD\",\n                                        \"payload\": \"7C4xhY\"\n                                    }\n                                ]\n                            },\n                            {\n                                \"type\": \"BUTTON\",\n                                \"sub_type\": \"URL\",\n                                \"index\": \"1\",\n                                \"parameters\": [\n                                    {\n                                        \"type\": \"payload\",\n                                        \"payload\": \"summer_blues_2023\"\n                                    }\n                                ]\n                            }\n                        ]\n                    }\n                ]\n            }\n        ]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}",
+					"host": [
+						"{{BaseURL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Template [Normal TEXT]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{APIKeys}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"messaging_product\": \"whatsapp\",\n    \"message_id\": \"\", // This is optional\n    \"recipient_type\": \"individual\",\n    \"to\": \"918591755325\",\n    \"type\": \"template\",\n    \"template\": {\n        \"name\": \"text_template_without_variable\",\n        \"language\": {\n            \"code\": \"en\"\n        },\n        \"components\": []\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}",
+					"host": [
+						"{{BaseURL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Template [Header text ,footer , body without variable ]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{APIKeys}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"messaging_product\": \"whatsapp\",\n    \"recipient_type\": \"individual\",\n    \"to\": \"918591755325\",\n    \"type\": \"template\",\n    \"template\": {\n        \"name\": \"template_with_header_footer_body\", \n        \"language\": {\n            \"code\": \"en\"\n        },\n        \"components\":[] // in this type template we don't have any variables in header text, body etc so components is empty\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}",
+					"host": [
+						"{{BaseURL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Template [Header text ,footer , body with variable ]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{APIKeys}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"messaging_product\": \"whatsapp\",\n    \"recipient_type\": \"individual\",\n    \"to\": \"918437340337\",\n    \"type\": \"template\",\n    \"template\": {\n        \"name\": \"slip_1\",\n        \"language\": {\n            \"code\": \"en\"\n        },\n        \"components\": [\n            {\n                \"type\": \"body\",\n                \"parameters\": [\n                    {\n                        \"type\": \"text\",\n                        \"text\": \"Ashish\"\n                    },\n                    {\n                        \"type\": \"text\",\n                        \"text\": \"Anil\"\n                    },\n                    {\n                        \"type\": \"text\",\n                        \"text\": \"Anil\"\n                    },\n                    {\n                        \"type\": \"text\",\n                        \"text\": \"Anil\"\n                    },\n                    {\n                        \"type\": \"text\",\n                        \"text\": \"Anil\"\n                    },\n                    {\n                        \"type\": \"text\",\n                        \"text\": \"Anil\"\n                    }\n                ]\n            }\n        ]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}",
+					"host": [
+						"{{BaseURL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Template [TEXT with QUICK REPLY]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{APIKeys}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"messaging_product\": \"whatsapp\",\n    \"recipient_type\": \"individual\",\n    \"to\": \"918437340337\",\n    \"type\": \"template\",\n    \"template\": {\n        \"name\": \"text_template_with_quick_reply_buttons\",\n        \"language\": {\n            \"code\": \"en\"\n        },\n        \"components\": [\n            {\n                \"type\": \"button\",\n                \"sub_type\": \"quick_reply\",\n                \"index\": \"0\",\n                \"parameters\": [\n                    {\n                        \"type\": \"payload\",\n                        \"payload\": \"Quick Reply\"\n                    }\n                ]\n            }\n        ]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}",
+					"host": [
+						"{{BaseURL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Template [Multiple Body Variable With QUICK Reply]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{APIKeys}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"messaging_product\": \"whatsapp\",\n    \"recipient_type\": \"individual\",\n    \"to\": \"918591755325\",\n    \"type\": \"template\",\n    \"template\": {\n        \"name\": \"multiple_body_variable_with_quick_reply_btn\",\n        \"language\": {\n            \"code\": \"en\"\n        },\n        \"components\": [\n            {\n                \"type\": \"body\",\n                \"parameters\": [\n                    {\n                        \"type\": \"text\",\n                        \"text\": \"Mandeep\"\n                    },\n                    {\n                        \"type\": \"text\",\n                        \"text\": \"Anil\"\n                    },\n                    {\n                        \"type\": \"text\",\n                        \"text\": \"Kumar\"\n                    }\n                ]\n            },\n            {\n                \"type\": \"button\",\n                \"sub_type\": \"quick_reply\",\n                \"index\": \"0\",\n                \"parameters\": [\n                    {\n                        \"type\": \"payload\",\n                        \"payload\": \"Quick Reply\"\n                    }\n                ]\n            }\n        ]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}",
+					"host": [
+						"{{BaseURL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Template[Header text with Body Variable]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{APIKeys}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"messaging_product\": \"whatsapp\",\n    \"recipient_type\": \"individual\",\n    \"to\": \"918591755325\",\n    \"type\": \"template\",\n    \"template\": {\n        \"name\": \"multiple_body_variable_with_quick_reply_btn\",\n        \"language\": {\n            \"code\": \"en\"\n        },\n        \"components\": [\n            {\n                \"type\": \"body\",\n                \"parameters\": [\n                    {\n                        \"type\": \"text\",\n                        \"text\": \"Mandeep\"\n                    },\n                    {\n                        \"type\": \"text\",\n                        \"text\": \"Anil\"\n                    },\n                    {\n                        \"type\": \"text\",\n                        \"text\": \"Kumar\"\n                    }\n                ]\n            },\n            {\n                \"type\": \"button\",\n                \"sub_type\": \"quick_reply\",\n                \"index\": \"0\",\n                \"parameters\": [\n                    {\n                        \"type\": \"payload\",\n                        \"payload\": \"Quick Reply\"\n                    }\n                ]\n            }\n        ]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}",
+					"host": [
+						"{{BaseURL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Template[Header text and simple body text]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{APIKeys}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"messaging_product\": \"whatsapp\",\n    \"recipient_type\": \"individual\",\n    \"to\": \"918591755325\",\n    \"type\": \"template\",\n    \"template\": {\n        \"name\": \"simple_header_type_text_template\",\n        \"language\": {\n            \"code\": \"en\"\n        },\n        \"components\": [] // in this type template we don't have any variables in header text, body etc so components is empty\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}",
+					"host": [
+						"{{BaseURL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Template[TEXT and Variable in header]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{APIKeys}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"messaging_product\": \"whatsapp\",\n    \"recipient_type\": \"individual\",\n    \"to\": \"918591755325\",\n    \"type\": \"template\",\n    \"template\": {\n        \"name\": \"header_type_text_with_var_in_header\",\n        \"language\": {\n            \"code\": \"en\"\n        },\n        \"components\": [\n            {\n                \"type\": \"header\",\n                \"parameters\": [\n                    {\n                        \"type\": \"text\",\n                        \"text\":\"Anil\"\n                    }\n                ]\n            }\n        ] \n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}",
+					"host": [
+						"{{BaseURL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Template[TEXT with image in header]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{APIKeys}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"messaging_product\": \"whatsapp\",\n    \"recipient_type\": \"individual\",\n    \"to\": \"918437340337\",\n    \"type\": \"template\",\n    \"template\": {\n        \"name\": \"image_temp_test\",\n        \"language\": {\n            \"code\": \"en\"\n        },\n        \"components\": [\n            {\n                \"type\": \"header\",\n                \"parameters\": [\n                    {\n                        \"type\": \"image\",\n                        \"image\": {\n                            \"link\": \"image_link\"\n                        }\n                    }\n                ]\n            }\n        ]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}",
+					"host": [
+						"{{BaseURL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Template[TEXT with Video in header]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{APIKeys}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"messaging_product\": \"whatsapp\",\n    \"recipient_type\": \"individual\",\n    \"to\": \"918591755325\",\n    \"type\": \"template\",\n    \"template\": {\n        \"name\": \"text_without_video_caption\",\n        \"language\": {\n            \"code\": \"en\"\n        },\n        \"components\": [\n            {\n                \"type\": \"header\",\n                \"parameters\": [\n                    {\n                        \"type\": \"video\",\n                        \"video\":{\n                            \"link\":\"video_url\"\n                        }\n                    }\n                ]\n            }\n        ] \n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}",
+					"host": [
+						"{{BaseURL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Template[TEXT with Document in header]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{APIKeys}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"messaging_product\": \"whatsapp\",\n    \"recipient_type\": \"individual\",\n    \"to\": \"918591755325\",\n    \"type\": \"template\",\n    \"template\": {\n        \"name\": \"text_with_document\",\n        \"language\": {\n            \"code\": \"en\"\n        },\n        \"components\": [\n            {\n                \"type\": \"header\",\n                \"parameters\": [\n                    {\n                        \"type\": \"document\",\n                        \"document\":{\n                            \"link\":\"\",\n                            \"filename\":\"sample\"\n                        }\n                    }\n                ]\n            }\n        ] \n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}",
+					"host": [
+						"{{BaseURL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Template[Body Text and Header with Variable]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{APIKeys}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"messaging_product\": \"whatsapp\",\n    \"recipient_type\": \"individual\",\n    \"to\": \"918591755325\",\n    \"type\": \"template\",\n    \"template\": {\n        \"name\": \"variable_in_header_and_body\",\n        \"language\": {\n            \"code\": \"en\"\n        },\n        \"components\": [\n            {\n                \"type\": \"header\",\n                \"parameters\": [\n                    {\n                        \"type\": \"text\",\n                        \"text\":\"Anil\"\n                    }\n                ]\n            },\n            {\n                 \"type\": \"body\",\n                 \"parameters\": [\n                    {\n                        \"type\": \"text\",\n                        \"text\":\"Anil\"\n                    },\n                     {\n                        \"type\": \"text\",\n                        \"text\":\"Samant\"\n                    }\n                ]\n\n            }\n        ] \n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}",
+					"host": [
+						"{{BaseURL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Template[Body Text and Call-to-Action Button]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{APIKeys}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"messaging_product\": \"whatsapp\",\n    \"recipient_type\": \"individual\",\n    \"to\": \"918591755325\",\n    \"type\": \"template\",\n    \"template\": {\n        \"name\": \"text_template_with_call_to_action_button\",\n        \"language\": {\n            \"code\": \"en\"\n        },\n        \"components\": []\n    }\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}",
+					"host": [
+						"{{BaseURL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Template[Body Text with variables and Call-to-Action Button]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{APIKeys}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"messaging_product\": \"whatsapp\",\n    \"recipient_type\": \"individual\",\n    \"to\": \"918591755325\",\n    \"type\": \"template\",\n    \"template\": {\n        \"name\": \"multiple_body_variable_with_call_action_btn\",\n        \"language\": {\n            \"code\": \"en\"\n        },\n        \"components\": [\n            {\n                \"type\": \"body\",\n                \"parameters\": [\n                    {\n                        \"type\": \"text\",\n                        \"text\": \"Samant\"\n                    },\n                    {\n                        \"type\": \"text\",\n                        \"text\": \"Anil\"\n                    },\n                    {\n                        \"type\": \"text\",\n                        \"text\": \"Kumar\"\n                    }\n                ]\n            }\n        ]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}",
+					"host": [
+						"{{BaseURL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Template[text and variable in url button]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{APIKeys}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"messaging_product\": \"whatsapp\",\n    \"recipient_type\": \"individual\",\n    \"to\": \"918591755325\",\n    \"type\": \"template\",\n    \"template\": {\n        \"name\": \"text_with_url_button_dynamic_variable\",\n        \"language\": {\n            \"code\": \"en\"\n        },\n        \"components\": [\n            {\n                \"type\": \"button\",\n                \"sub_type\": \"url\",\n                \"index\": \"0\",\n                \"parameters\": [\n                    {\n                        \"type\": \"text\",\n                        \"text\": \"Samant\"\n                    }\n                ]\n            }\n        ]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}",
+					"host": [
+						"{{BaseURL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Template[text with variable , image header and mutiple buttons]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{APIKeys}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"messaging_product\": \"whatsapp\",\n    \"recipient_type\": \"individual\",\n    \"to\": \"918591755325\",\n    \"type\": \"template\",\n    \"template\": {\n        \"name\": \"multi_functional_template\",\n        \"language\": {\n            \"code\": \"en\"\n        },\n        \"components\": [\n            {\n                \"type\": \"body\",\n                \"parameters\": [\n                    {\n                        \"type\": \"text\",\n                        \"text\": \"Samant\"\n                    }\n                ]\n            },\n             {\n                \"type\": \"header\",\n                \"parameters\": [\n                    {\n                        \"type\": \"image\",\n                        \"image\": {\n                            \"link\":\"\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"type\": \"button\",\n                \"sub_type\": \"url\",\n                \"index\": \"1\",\n                \"parameters\": [\n                    {\n                        \"type\": \"text\",\n                        \"text\": \"Anil\"\n                    }\n                ]\n            }\n        ]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}",
+					"host": [
+						"{{BaseURL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send [Text Message]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{APIKeys}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"to\": \"917424950955\",\n    \"type\": \"text\",\n    \"text\": {\n        \"body\": \"hi\"\n    },\n    \"recipient_type\": \"individual\",\n    \"messaging_product\": \"whatsapp\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}",
+					"host": [
+						"{{BaseURL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send [Reaction Message]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{APIKeys}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"messaging_product\": \"whatsapp\",\n    \"recipient_type\": \"individual\",\n    \"to\": \"918591755325\",\n    \"type\": \"reaction\",\n    \"reaction\": {\n        \"message_id\": \"wamid.HBgMOTE4NTkxNzU1MzI1FQIAERgSQkIyMTRDMTg2RDMyMUExREIwAA==\", // \"Cannot react to a message if it's more than 30 days old or doesn't correspond to any message in the conversation.\"\n        \"emoji\": \"\\uD83D\\uDE00\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}",
+					"host": [
+						"{{BaseURL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send [Document Message]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{APIKeys}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"messaging_product\": \"whatsapp\",\n    \"recipient_type\": \"individual\",\n    \"to\": \"918591755325\",\n    \"type\": \"document\",\n    \"document\": {\n        \"link\": \"\", // file Url \n        \"filename\": \"Sample\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}",
+					"host": [
+						"{{BaseURL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send [Image Message]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{APIKeys}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"messaging_product\": \"whatsapp\",\n    \"recipient_type\": \"individual\",\n    \"to\": \"918591755325\",\n    \"type\": \"image\",\n    \"image\": {\n        \"link\": \"\",\n        \"caption\": \"Pic\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}",
+					"host": [
+						"{{BaseURL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send [Location Message]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{APIKeys}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"messaging_product\": \"whatsapp\",\n    \"recipient_type\": \"individual\",\n    \"to\": \"918591755325\",\n    \"type\": \"location\",\n    \"location\": {\n        \"latitude\": \"37.44216251868683\",\n        \"longitude\": \"-122.16153582049394\",\n        \"name\": \"Philz Coffee\",\n        \"address\": \"101 Forest Ave, Palo Alto, CA 94301\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}",
+					"host": [
+						"{{BaseURL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send [Contact Message]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{APIKeys}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"messaging_product\": \"whatsapp\",\n    \"recipient_type\": \"individual\",\n    \"to\": \"918591755325\",\n    \"type\": \"contacts\",\n    \"contacts\": [\n        {\n            \"addresses\": [\n                {\n                    \"street\": \"STREET\",\n                    \"city\": \"CITY\",\n                    \"state\": \"STATE\",\n                    \"zip\": \"ZIP\",\n                    \"country\": \"COUNTRY\",\n                    \"country_code\": \"COUNTRY_CODE\",\n                    \"type\": \"HOME\"\n                },\n                {\n                    \"street\": \"STREET\",\n                    \"city\": \"CITY\",\n                    \"state\": \"STATE\",\n                    \"zip\": \"ZIP\",\n                    \"country\": \"COUNTRY\",\n                    \"country_code\": \"COUNTRY_CODE\",\n                    \"type\": \"WORK\"\n                }\n            ],\n            \"birthday\": \"1996-03-11\",\n            \"emails\": [\n                {\n                    \"email\": \"company@gmail.com\",\n                    \"type\": \"WORK\"\n                },\n                {\n                    \"email\": \"company@gmail.com\",\n                    \"type\": \"HOME\"\n                }\n            ],\n            \"name\": {\n                \"formatted_name\": \"NAME\",\n                \"first_name\": \"FIRST_NAME\",\n                \"last_name\": \"LAST_NAME\",\n                \"middle_name\": \"MIDDLE_NAME\",\n                \"suffix\": \"SUFFIX\",\n                \"prefix\": \"PREFIX\"\n            },\n            \"org\": {\n                \"company\": \"COMPANY\",\n                \"department\": \"DEPARTMENT\",\n                \"title\": \"TITLE\"\n            },\n            \"phones\": [\n                {\n                    \"phone\": \"PHONE_NUMBER\",\n                    \"type\": \"HOME\"\n                },\n                {\n                    \"phone\": \"PHONE_NUMBER\",\n                    \"type\": \"WORK\",\n                    \"wa_id\": \"PHONE_OR_WA_ID\"\n                }\n            ],\n            \"urls\": [\n                {\n                    \"url\": \"URL\",\n                    \"type\": \"WORK\"\n                },\n                {\n                    \"url\": \"URL\",\n                    \"type\": \"HOME\"\n                }\n            ]\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}",
+					"host": [
+						"{{BaseURL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send [Interactive List Message]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{APIKeys}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"messaging_product\": \"whatsapp\",\n    \"recipient_type\": \"individual\",\n    \"to\": \"918591755325\",\n    \"type\": \"interactive\",\n    \"interactive\": {\n        \"type\": \"list\",\n        \"header\": {\n            \"type\": \"text\",\n            \"text\": \"Choose Shipping Option\"\n        },\n        \"body\": {\n            \"text\": \"Which shipping option do you prefer?\"\n        },\n        \"footer\": {\n            \"text\": \"Lucky Shrub: Your gateway to succulents™\"\n        },\n        \"action\": {\n            \"button\": \"Shipping Options\",\n            \"sections\": [\n                {\n                    \"title\": \"I want it ASAP!\",\n                    \"rows\": [\n                        {\n                            \"id\": \"priority_express\",\n                            \"title\": \"Priority Mail Express\",\n                            \"description\": \"Next Day to 2 Days\"\n                        },\n                        {\n                            \"id\": \"priority_mail\",\n                            \"title\": \"Priority Mail\",\n                            \"description\": \"1–3 Days\"\n                        }\n                    ]\n                },\n                {\n                    \"title\": \"I can wait a bit\",\n                    \"rows\": [\n                        {\n                            \"id\": \"usps_ground_advantage\",\n                            \"title\": \"USPS Ground Advantage\",\n                            \"description\": \"2–5 Days\"\n                        },\n                        {\n                            \"id\": \"media_mail\",\n                            \"title\": \"Media Mail\",\n                            \"description\": \"2–8 Days\"\n                        }\n                    ]\n                }\n            ]\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}",
+					"host": [
+						"{{BaseURL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send [Interactive Location Message]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{APIKeys}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"messaging_product\": \"whatsapp\",\n    \"recipient_type\": \"individual\",\n    \"type\": \"interactive\",\n    \"to\": \"918591755325\",\n    \"interactive\": {\n        \"type\": \"location_request_message\",\n        \"body\": {\n            \"text\": \"Let us start with your pickup. You can either manually *enter an address* or *share your current location*.\"\n        },\n        \"action\": {\n            \"name\": \"send_location\"\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}",
+					"host": [
+						"{{BaseURL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send [Interactive Reply Buttons Messages]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{APIKeys}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"messaging_product\": \"whatsapp\",\n    \"recipient_type\": \"individual\",\n    \"to\": \"918591755325\",\n    \"type\": \"interactive\",\n    \"interactive\": {\n        \"type\": \"button\",\n        \"header\": {\n            \"type\": \"image\", // here text , image , video and document is allowed and you need to add object according to type\n            \"image\": {\n                \"link\": \"\"\n            }\n        },\n        \"body\": {\n            \"text\": \"Hi Pablo! Your gardening workshop is scheduled for 9am tomorrow. Use the buttons if you need to reschedule. Thank you!\"\n        },\n        \"footer\": {\n            \"text\": \"Lucky Shrub: Your gateway to succulents!™\"\n        },\n        \"action\": {\n            \"buttons\": [\n                {\n                    \"type\": \"reply\",\n                    \"reply\": {\n                        \"id\": \"change-button\",\n                        \"title\": \"Change\"\n                    }\n                },\n                {\n                    \"type\": \"reply\",\n                    \"reply\": {\n                        \"id\": \"cancel-button\",\n                        \"title\": \"Cancel\"\n                    }\n                }\n            ]\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}",
+					"host": [
+						"{{BaseURL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send [Interactive Call-to-Action URL Buttons Message]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{APIKeys}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"messaging_product\": \"whatsapp\",\n    \"recipient_type\": \"individual\",\n    \"to\": \"918591755325\",\n    \"type\": \"interactive\",\n    \"interactive\": {\n        \"type\": \"cta_url\",\n        \"header\": {\n            \"type\": \"text\",\n            \"text\": \"Available Dates\"\n        },\n        \"body\": {\n            \"text\": \"Tap the button below to see available dates.\"\n        },\n        \"footer\": {\n            \"text\": \"Dates subject to change.\"\n        },\n        \"action\": {\n            \"name\": \"cta_url\",\n            \"parameters\": {\n                \"display_text\": \"See Dates\",\n                \"url\": \"\"\n            }\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}",
+					"host": [
+						"{{BaseURL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send [Address Message]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{APIKeys}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"messaging_product\": \"whatsapp\",\n    \"recipient_type\": \"individual\",\n    \"to\": \"918591755325\",\n    \"type\": \"interactive\",\n    \"interactive\": {\n        \"type\": \"address_message\",\n        \"body\": {\n            \"text\": \"Thanks for your order! Tell us what address you’d like this order delivered to.\"\n        },\n        \"action\": {\n            \"name\": \"address_message\",\n            \"parameters\": {\n                \"display_text\": \"\", // Optional\n                \"url\": \"\", // optional\n                \"country\": \"IN\" // Required\n            }\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}",
+					"host": [
+						"{{BaseURL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send [Replies]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{APIKeys}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"messaging_product\": \"whatsapp\",\n    \"recipient_type\": \"individual\",\n    \"context\": {\n        \"message_id\": \"wamid.HBgMOTE4NDM3MzQwMzM3FQIAERgSMThFODkyMTYzNjQ0MUE1NTE3AA==\"\n    },\n    \"to\": \"918437340337\",\n    \"type\": \"text\",\n    \"text\": {\n        \"preview_url\": false,\n        \"body\": \"Great\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}",
+					"host": [
+						"{{BaseURL}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BaseURL",
+			"value": "YOUR_BASE_URL",
+			"type": "string"
+		},
+		{
+			"key": "APIKeys",
+			"value": "YOUR_API_KEY",
+			"type": "string"
+		}
+	]
+}

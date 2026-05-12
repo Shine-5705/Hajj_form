@@ -1308,6 +1308,16 @@ async function safeReply(phone, message) {
   }
 }
 
+async function sendWebchatLinkToPhone(phone) {
+  const linkReply = `${WHATSAPP_LINK_MESSAGE}\n${WEBCHAT_FORM_LINK}`;
+  const response = await safeReply(phone, linkReply);
+  return {
+    stage: "web_link_sent",
+    webchatLink: WEBCHAT_FORM_LINK,
+    ...response,
+  };
+}
+
 app.use(express.static(path.join(__dirname, "..", "public")));
 
 app.get("/health", (_req, res) => {
@@ -1358,6 +1368,25 @@ app.post("/webchat/message", async (req, res) => {
   });
 });
 
+app.post("/call/end/send-link", async (req, res) => {
+  const { phone } = req.body || {};
+  if (!phone || typeof phone !== "string") {
+    return res.status(400).json({
+      ok: false,
+      error: "Provide 'phone' as a valid string.",
+    });
+  }
+
+  const result = await sendWebchatLinkToPhone(phone);
+  return res.status(200).json({
+    ok: true,
+    triggered: true,
+    reason: "call_ended",
+    redirectUrl: WEBCHAT_FORM_LINK,
+    ...result,
+  });
+});
+
 app.post("/webhook/message", async (req, res) => {
   const { phone } = req.body;
   const incomingText = pickInputText(req.body);
@@ -1371,14 +1400,11 @@ app.post("/webhook/message", async (req, res) => {
   }
 
   if (isTriggerMessage(incomingText)) {
-    const linkReply = `${WHATSAPP_LINK_MESSAGE}\n${WEBCHAT_FORM_LINK}`;
-    const response = await safeReply(phone, linkReply);
+    const result = await sendWebchatLinkToPhone(phone);
     return res.status(200).json({
       ok: true,
       triggered: true,
-      stage: "web_link_sent",
-      webchatLink: WEBCHAT_FORM_LINK,
-      ...response,
+      ...result,
     });
   }
 
